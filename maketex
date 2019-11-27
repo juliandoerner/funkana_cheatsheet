@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Calls latexmk
+
+#Creates outdir for auxiliary files
+if [ ! -d "out" ]; then
+  mkdir out
+fi
+
+latexmk -pdf -outdir=out cheatsheet.tex
+mv out/*.pdf .
