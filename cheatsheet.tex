@@ -3,15 +3,18 @@
 \usepackage{silence}
 \usepackage{framework/style}
 \usepackage{framework/mathmakros}
-\include{framework/def.tex}
+\usepackage{framework/environment}
+\include{framework/def}
 
 \begin{document}
 
 \small
 \begin{multicols*}{5}
+  \raggedcolumns
   %content
   %\input{content/...}
 
+  \input{content/basics.tex}
 
 \end{multicols*}
 \end{document}
