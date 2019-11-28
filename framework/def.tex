@@ -8,7 +8,7 @@
 
 \tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
     outline/.style={draw=circle edge, thick}}
-    
+
 \pgfdeclarelayer{background}
 \pgfsetlayers{background,main}
 
@@ -27,8 +27,10 @@ leftmargin=0mm,rightmargin=0mm,skipbelow=0mm,skipabove=0mm,
 \begin{mdframed}[style=header]
 \footnotesize
 \sffamily
-Hilfszettel zur Klausur\\
-von~Tim~S.,~Seite~\thepage~von~2
+\textbf{Funkanalysis~Cheatsheet}\\
+\tiny{von~Julian~Dörner}\\
+\tiny\texttt{\href{github.com/juliandoerner/funkana_cheatsheet}{\ensuremath\heartsuit \@ github.com/juliandoerner/funkana\_cheatsheet}}\\
+\tiny{Seite~\thepage~von~2}
 \end{mdframed}
 }
 
@@ -72,7 +74,7 @@ von~Tim~S.,~Seite~\thepage~von~2
 %%%%% START CHANGE
 \ifnum\count@=\numexpr\mult@rightbox+2\relax
           \setbox\count@\vsplit\@cclv to \dimexpr \dimen@-1cm\relax
-\setbox\count@\vbox to \dimen@{\vbox to 1cm{\header}\unvbox\count@\vss}%
+\setbox\count@\vbox to \dimen@{\vbox to 1.2cm{\header}\unvbox\count@\vss}%
 \else
       \setbox\count@\vsplit\@cclv to \dimen@
 \fi
