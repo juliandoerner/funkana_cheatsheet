@@ -1,6 +1,7 @@
 \ProvidesPackage{mathmakros}[2019/09/23]
 
 \RequirePackage{mathtools}
+\RequirePackage{amssymb}
 
 %Zahlenmengen
 \newcommand{\RR}{\mathbb{R}}
@@ -8,6 +9,7 @@
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\CC}{\mathbb{C}}
+\newcommand{\KK}{\mathbb{K}}
 \newcommand{\IRR}{\mathbb{I}\mathbb{R}}
 \newcommand{\ICC}{\mathbb{I}\mathbb{C}}
 \newcommand{\CCmn}{\CC^{m \times n}}
@@ -30,3 +32,11 @@
 
 %epsilon
 \newcommand{\eps}{\varepsilon}
+
+%norm
+\newcommand{\norm}[1]{\|#1\|}
+
+%Vektorraumabkürzungen
+\newcommand{\KVR}{\KK \mathrm{-VR}}
+\newcommand{\RVR}{\RR \mathrm{-VR}}
+\newcommand{\CVR}{\CC \mathrm{-VR}}

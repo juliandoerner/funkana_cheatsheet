@@ -1,7 +1,13 @@
 \ProvidesPackage{environment}[2019/11/27]
 
+%spacing elements
+\newcommand{\heel}{\vspace{0.3em}}
+\newcommand{\dheel}{\vspace{0.6em}}
+\newcommand{\fheeld}{\vspace{1em}}
+
+%environment for definitions
 \newenvironment {definition} [1]{%
-  \textbf{DEF:} #1 \\
+  \uuline{\textbf{DEF:}} \textbf{#1} \\
   }
-  {%
+  {\heel
   }
