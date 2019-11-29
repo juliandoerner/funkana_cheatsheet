@@ -1,0 +1,45 @@
+
+\section{Räume}
+\begin{definition}{Metrik}
+  $d:X \times X \to [0,\infty)$, $x,y \in X$
+  \begin{enumerate}[label=(M\arabic*)]
+    \item $d(x,y) = 0 \Leftrightarrow x = y$ \textit{Definitheit}
+    \item $d(x,y) = d(y,x)$ \textit{Symmetrie}
+    \item $d(x,z) \leq d(x,y) + d(y,z)$ \textit{Dreiecksungleichung}
+  \end{enumerate}
+\end{definition}
+
+Genügt $d$ nur (M2), (M3) und ist $d(x,x) = 0$, dann heißt $d$
+\textbf{Halbmetrik}.
+\heel
+
+\begin{definition}{Metrischer Raum}
+  $X \neq \emptyset, d$ Metrik, dann heißt $(X,d)$ \textit{metrischer Raum}
+\end{definition}
+
+\begin{definition}{Vollständigkeit}
+  Ein metrischer Raum $(X,d)$ heißt \textit{vollständig}, wenn jede Cauchyfolge
+  konvergiert.
+\end{definition}
+
+\begin{definition}{Norm}
+  $\norm{\cdot}:X\to\RR$, $X\ \KVR$, $x,y \in X, \lambda \in \KK$
+  \begin{enumerate}[label=(N\arabic*)]
+    \item $\norm{x} = 0 \implies x = 0$ \textit{Definitheit}
+    \item $\norm{\lambda x} = |\lambda|\norm{x}$ \textit{Homogenität}
+    \item $\norm{x+y} \leq \norm{x} + \norm{y}$ \textit{Dreiecksungleichung}
+  \end{enumerate}
+\end{definition}
+
+Genügt $\norm{\cdot}$ nur (N2), (N3), dann heißt $\norm{\cdot}$
+Halbnorm auf X.
+\heel
+
+\begin{definition}{Normierter Raum}
+  $X\ \KVR, \norm{\cdot}$ Norm, dann heißt $(X,\norm{\cdot})$
+  \textit{normierter Raum}.
+\end{definition}
+
+\begin{definition}{Banachraum}
+  Ein vollständig normierter Raum ${(X,\norm{\cdot})}$ heißt Banachraum
+\end{definition}
