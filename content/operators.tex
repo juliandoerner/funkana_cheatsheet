@@ -112,3 +112,41 @@ $X norm. R.$
   Dann ist $X/Y$ mit der Quo.norm ein norm. R. Ist $X$ \textbf{voll.}, dann
   auch $X/Y$
 \end{satz}
+
+
+\subsection{Kompakte Operatoren}
+
+$X,Y$ norm. R., $B_X=\{x \in X|\ \|x\| \leq 1\}$, $T:X \to Y$ linear
+
+\begin{definition}{kompakter Operator}
+  $T$ \textbf{kompakt}, falls $T(B_X)$ \textit{relativ kompakt} in $Y$
+\end{definition}
+
+\begin{bemerkung}
+  \begin{enumerate}[label = (\roman*)]
+    \item $T$ \textit{kompakt} $\implies T \in L(X,Y)$
+    \item $Y$ voll. Dann gilt $T$ \textit{kompakt}
+      \begin{enumerate}[label = $\Leftrightarrow$]
+        \item $T(B_X)$ \textit{totalbeschränkt}
+        \item für $(x_n)$ \textit{beschränkt} enthält
+          $(Tx_n)$ \textit{konv. TF}
+      \end{enumerate}
+  \end{enumerate}
+\end{bemerkung}
+
+\begin{satz}{kompakte Operatoren}
+  $X,Y,Z$ voll.
+  \begin{enumerate}[label=(\roman*)]
+    \item $K(X,Y)$ \textit{abg. UR} von $L(X,Y)$ und voll.
+    \item $T\in L(X,Y),\ S\in L(Y,Z)$, ist $T \text{ o. } S$ kompakt
+      $\implies ST \in K(X,Z)$
+    \item $T \in L(X,Y),\ dimR(T) < \infty \implies T \in K(X,Y)$
+    \item $dimX < \infty \implies T \in K(X,Y)$
+  \end{enumerate}
+\end{satz}
+
+\begin{korrolar}
+  $X,Y$ \textit{voll.}, $T \in L(X,Y)$. Es gilt
+  $\exists (T_n)_n \subset L(X,Y), dimR(T_n)<\infty, \|T_n-T\| \to 0
+  \implies T \in K(X,Y)$
+\end{korrolar}
