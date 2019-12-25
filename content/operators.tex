@@ -1,0 +1,114 @@
+\section{Operatoren}
+
+
+\subsection{Stetige lineare Operatoren}
+$X,Y$ norm. R., $T:X\to Y$ linear\\
+\begin{satz}{Stetigkeit von lin. Abb.}
+  Es sind äquivalent
+  \begin{enumerate}[label = (\roman*)]
+    \item $T$ stetig
+    \item $T$ stetig in $0$
+    \item ($T$ beschränkt $\Leftrightarrow \exists C \geq 0 \forall x \in X:
+      \|Tx\| \leq C\|x\|$)
+    \item $T$ ist lipschitz
+    \item $T$ ist glm. stetig
+  \end{enumerate}
+\end{satz}
+
+\begin{definition}{Raum besch., lin. Operatoren}
+  $L(X,Y)=\{ T:X \to Y|T \text{ lin. u. besch.} \}$
+\end{definition}
+
+\begin{definition}{Operatornorm}
+  \begin{align*}
+    \|T\| &= \sup \{ \frac{\|Tx\|}{\|x\|}| x\in X \setminus \{0\}\} \\
+    &= \inf \{ c \geq 0|\ \|Tx\| \leq c \|x\| \forall x\in X \} \\
+    &= \sup_{x\in X, \|x\| = 1}\|Tx\| \\
+    &= \sup_{x\in X, \|x\| \leq 1}\|Tx\|
+  \end{align*}
+\end{definition}
+
+\begin{definition}{Dualraum}
+  $X' = L(X,\KK)$ \textbf{Dualraum} zu $X$
+\end{definition}
+
+\begin{satz}{$L(X,Y)$ vollständig?}
+  $Y$ voll. $\implies L(X,Y)$ vollständig bzgl. Op.norm
+\end{satz}
+
+\begin{satz}{lineare Fortsetzung}
+  $Y$ voll., $D \subset X$ dichter UR, $T \in L(D,Y)$.\\
+  Dann ex. eind. Fortsetzung $\tilde{T} \in L(X,Y)$, mit $\|T\|=\|\tilde{T}\|$
+\end{satz}
+
+\begin{definition}{Kern, Bild, Einbettung,...}
+  \begin{enumerate}[label = (\roman*)]
+    \item $N(T) = \{x \in X: Tx =0\}$ \textbf{Kern}
+    \item $R(T) = \{y = Tx: x \in X\}$ \textbf{Bild}
+    \item \textit{injektiver} Oper. heißt \textbf{Einbettung}
+      $X \leftrightarrow Y$
+    \item \textit{bijektiver} Oper. mit \textit{stetiger Inverser} $T^{-1}$
+     heißt \textbf{Isomorphismus} $X \simeq Y$
+    \item Oper. mit $\|Tx\| = \|x\|$ heißt \textbf{isometrisch}
+    \item Oper. mit $\|T\| \leq 1$ \textbf(!!!) heißt \textbf{kontraktiv}
+  \end{enumerate}
+\end{definition}
+
+\begin{bemerkung}
+  \begin{itemize}
+    \item $N(T)$ \textit{abgeschlossen}, ($T\in L(X,Y)$)
+    \item $T$ \textit{isometrisch} $\implies T$ \textit{kontraktiv} u.
+      \textit{injektiv}
+    \item $T$ \textit{kontraktiv} $\implies T$ \textit{stetig}
+    \item $T$ \textit{isometrisch} $\implies T^{-1}:R(T) \to X$
+      \textit{isometrisch}
+    \item $R(T)$ \textit{abgeschlossen in} $Y$
+  \end{itemize}
+\end{bemerkung}
+
+
+\subsection{Summen norm. R.}
+  $X$ norm. R.
+
+\begin{definition}{Projektion}
+  $P \in L(X), P^2=P$ heißt \textbf{Projektion}
+\end{definition}
+
+\begin{lemma}
+  $P \in L(X)$ Projektion, $X_1 = N(P) = R(1-P),\ X_2 = R(P) = N(1-P)$.
+  Dann ist $(1-P)$ auch Projektion und $X = X_1 \oplus X_2$ sowie
+  $\|P\| \geq 1, P \neq 0$
+\end{lemma}
+
+\begin{lemma}
+  $X = X_1 \oplus X_2$. Dann $\exists P \in L(X)$ ein. Projektion mit
+  $R(P) = X_1, N(P) = X_2$
+\end{lemma}
+
+\begin{bemerkung}
+  $X$ voll. $\implies (X_1 \oplus X_2 \simeq X_1 \times X_2)$
+\end{bemerkung}
+
+
+\subsection{Quotientenräume}
+$X norm. R.$
+
+\begin{definition}{Quotientenraum}
+  $Y$ UR von $X$.\\
+  $X/Y = \{\hat{x} = x + Y| x\in X\}$ \textbf{Quotientenraum}
+\end{definition}
+
+\begin{definition}{Quotientenabbildung}
+  $Q:X \to X/Y,\ Qx = \hat{x}$ \textbf{Quotientenabbildung},
+  \textit{linear} u. \textit{surjektiv}, $N(Q) = Y$
+\end{definition}
+
+\begin{definition}{Quotientennorm}
+  $\|\hat{x}\| = \inf\{\|x-y\|\ |y\in Y \} (= d(x,Y))$
+\end{definition}
+
+\begin{satz}{$X/Y$ norm. R.?}
+  $Y$ \textbf{\uline{abg.}} UR von $X$.\\
+  Dann ist $X/Y$ mit der Quo.norm ein norm. R. Ist $X$ \textbf{voll.}, dann
+  auch $X/Y$
+\end{satz}
