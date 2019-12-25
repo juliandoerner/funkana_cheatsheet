@@ -1,0 +1,247 @@
+\section{Topologie}
+
+\begin{definition}{Offen und Abgeschlossen}
+  $M \subset X$ \textbf{offen} $\Leftrightarrow \forall x_0 \in M
+  \exists r>0: B(x_0,r) \subset M$\\
+  $M \subset X$ \textbf{abgeschlossen} $\Leftrightarrow X\setminus M$ offen.
+\end{definition}
+
+\begin{lemma}
+  \begin{enumerate}[label = (\arabic*)]
+    \item Die Vereinigung \textit{beliebig} vieler offener Mengen ist offen.
+    \item Der Schnitt \textit{endlich} vieler offener Mengen ist offen.
+  \end{enumerate}
+\end{lemma}
+
+\begin{definition}{innerer Punkt, Randpunkt, Abschluss}
+  $M \subset X$
+  \begin{enumerate}[label = (\arabic*)]
+    \item $x_0 \in M$ \textbf{innerer Pkt.} von M
+      $\Leftrightarrow \exists r>0: B(x_0,r) \subset M$
+    \item $int(M) = \{x \in M|x\ \text{i. Pkt. v.}\ M\}$
+    \item $x_0 \in X$ \textbf{Randpunkt} von M $\Leftrightarrow
+      \forall r>0: B(x_0,r) \cap M \neq \emptyset \wedge B(x_0,r)
+      \cap (X\setminus M) \neq \emptyset.$
+    \item \textbf{Rand} $\partial M = \{x\in X| x \text{ Randpunkt v. } M\}$
+    \item \textbf{Abschluss} $\overline{M} = \{x \in X|\forall r>0 B(x,r)\cap
+      M \neq \emptyset$
+  \end{enumerate}
+\end{definition}
+
+\begin{itemize}
+  \item $int(X\setminus M) = X \setminus \overline{M}$
+  \item $\overline{X \setminus M} = X \setminus int(M)$
+  \item $M$ offen $\Leftrightarrow int(M) = M$
+  \item $M$ abg. $\Leftrightarrow \overline{M} = M$
+  \item $\partial M = \overline{M} \cap \overline{X\setminus M}$
+  \item $\overline{M} = int(M) \discup \partial M$
+  \item $X = int(M) \discup \partial M \discup int(X \setminus M)$
+\end{itemize}
+\heel
+
+\begin{lemma}
+  $M \subset X, x_0 \in X\\ x_0 \in \overline{M} \Leftrightarrow
+  \exists (x_n)_n \subset M: x_n \to x_0$
+\end{lemma}
+
+\begin{korrolar}
+  $M \subset X \text{ abg.} \Leftrightarrow \forall (x_n)_n \subset M:
+  {(x_n \to x_0 \implies x_0 \in M)}$
+\end{korrolar}
+
+\begin{satz}{voll. Teilraum}
+  $(X,d)$ metr., \textit{voll.}, $\emptyset \neq M \subset X$\\
+  $(M,d_{|M})$ \textit{voll.} $\Leftrightarrow M$ abg. in $X$.
+\end{satz}
+
+\dheel
+
+\begin{definition}{Dicht, seperabel}
+  $(X,d)$ metr., $D,M \subset X$
+  \begin{enumerate}[label = (\arabic*)]
+    \item $D$ \textbf{dicht} in $M \Leftrightarrow M \subset \overline{D}$
+    \item $(X,d)$ \textbf{seperabel} $\Leftrightarrow \exists A \subset X:
+    A \text{ abz. und dicht in }X$
+  \end{enumerate}
+\end{definition}
+
+$D$ \textbf{dicht} in $M \Leftrightarrow \forall x
+\in M \exists (x_n)_n \subset D: x_n \to x$
+\heel
+
+\begin{lemma}
+  $(X, \norm{\cdot})$ ist \textbf{seperabel} $\Leftrightarrow
+  \exists A \subset X: A \text{ abz. } lin(A) \text{ dicht in X}$
+\end{lemma}
+
+
+
+\subsection{Teilraumtopologie}
+$(X,d)$ metr. Raum, ${M \subset X, d_M:M\times M \to \RR}$
+\textit{Teilraummetrik}.
+
+\begin{definition}{relativ offen}
+  $A \subset M$ heißt \textbf{relativ offen}, falls $A$ offen in $(M,d_M)$
+\end{definition}
+
+
+
+\subsection{Stetigkeit}
+
+$X,Y$ metr. R., $f:X\to Y$\\
+\begin{definition}{Stetigkeit}
+  \begin{enumerate}[label = (\arabic*)]
+    \item  f heißt \textbf{stetig}, falls\\
+      $\forall O \subset Y \text{ offen } \implies f^{-1}(O) \text{ offen }$
+    \item f heißt \textbf{stetig in} $x_0 \in X$, falls\\
+      $\forall V \subset Y \text{ Umgebung v. } f(x_0) \exists
+      U \subset X \text{ Umgebung v. } x_0: f(U) \subset V$
+  \end{enumerate}
+\end{definition}
+
+\begin{bemerkung}
+  f stetig in $x_0 \in X$
+  \begin{enumerate}[label= $\Leftrightarrow$]
+    \item $\forall \varepsilon >0 \exists \delta >0 \forall x \in X:
+      d(x,x_0)<\delta \implies d(f(x),f(x_0)) < \varepsilon$
+    \item $\forall \varepsilon >0 \exists \delta >0:
+      B(x_0,\delta) \subset f^{-1}(B(f(x_0)), \varepsilon)$
+    \item $x_n \to x_0 \implies f(x_n) \to f(x_0)$
+  \end{enumerate}
+\end{bemerkung}
+
+\begin{definition}{glm. Stetigkeit}
+  $f$ heißt \textbf{glm. Stetig}, falls
+  $\forall \varepsilon >0 \exists \delta >0 \forall x,y \in X:
+  d(x,y) < \delta \implies d(f(x),f(y)) < \varepsilon$
+\end{definition}
+
+\begin{bemerkung}
+    $f$ glm stetig, $(x_n)$ CF $\implies (f(x_n))$ CF
+\end{bemerkung}
+
+\begin{definition}{Lipschitz-Stetig}
+  $f$ heißt \textbf{Lipschitz-Stetig}, falls
+  $\exists L >0 \forall \delta >0 \forall x,y \in X:
+  d(f(x),f(y)) \leq L d(x,y)$
+\end{definition}
+
+\begin{satz}{glm. Fortsetzung}
+  $D\subset X,\ X,Y$ vollständig, $f$ glm. Stetig.\\
+  Dann existiert eine \textit{eindeutige, glm. Stetige} Fortsetzung
+  $\tilde{f}: \overline{D} \to Y$
+\end{satz}
+
+
+
+\subsection{Äquivalente Normen}
+
+$(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
+
+\begin{definition}{Äquivalente Normen}
+  $\|\cdot\|, \||\cdot\||$ sind äquivalent, falls
+  $\exists c,C>0 \forall x\in X: c\|x\| \leq \||x\|| \leq C \|x\|$
+\end{definition}
+
+\begin{satz}{äq. Normen und GWe}
+  \begin{enumerate}[label = $\Leftrightarrow$]
+    \item $\|\cdot\|, \||\cdot\||$ äquivalent
+    \item $\|\cdot\|, \||\cdot\||$ haben die \textit{gleichen konv. Folgen}
+    \item $\|\cdot\|, \||\cdot\||$ haben die \textit{gleichen Nullfolgen}
+  \end{enumerate}
+\end{satz}
+
+\begin{bemerkung}
+
+  \begin{enumerate}[label = (\roman*)]
+    \item $(X,d_1),(X,d_2)$ metr. Räume mit den selben konv. Folgen
+      $\not\Rightarrow$ dieselben CF
+    \item Sind $\|\cdot\|, \||\cdot\||$ äquivalent, dann haben die Räume die
+      \textit{gleichen} offenen (abgl.) Mengen
+    \item Sind $\|\cdot\|, \||\cdot\||$ äquivalent, dann gilt
+      $(X,\|\cdot\|)$ voll. $\Leftrightarrow$ $(X,\||\cdot\||)$ voll.
+    \item In end. dim. Räumen sind alle Normen äq.
+  \end{enumerate}
+\end{bemerkung}
+
+
+
+\subsection{Kompaktheit}
+
+\begin{definition}{Komapkt, folgenkom., rel. kom., totalbeschränkt}
+  $(X,d)$ metr. R., $K \subset X$
+  \begin{enumerate}[label = (\roman*)]
+    \item $K$ \textbf{kompakt}, falls jede offenen Überdeckung von K eine
+      endliche Teilüberdeckung besitzt
+    \item $K$ \textbf{folgenkompakt}, falls jede Folge in K eine konvergente TF
+      besitzt
+    \item $K$ \textbf{relativ kompakt}, falls $\overline{K}$ kompakt
+    \item $K$ \textbf{totalbeschränkt}, falls
+      $\forall \varepsilon >0 \exists x_1,...,x_m \in X:
+      K \subset \cup_{i=1}^{m}B(x_j,\varepsilon) $
+  \end{enumerate}
+\end{definition}
+
+\begin{satz}{Kompaktheit in metr. R.}
+  \begin{enumerate}[label = $\Leftrightarrow$]
+    \item $K$ \textit{kompakt}
+    \item $K$ \textit{folgenkompakt}
+    \item $K$ \textit{totalbeschränkt} und \textit{vollständig}
+  \end{enumerate}
+\end{satz}
+
+\begin{bemerkung}
+  \begin{enumerate}[label=(\roman*)]
+    \item $K$ \textit{rel. kompakt} u. \textit{abgeschlossen}
+      $\implies$ $K$ \textit{kompakt}
+    \item $K$ \textit{komapkt} $\implies$ $K$ \textit{totalbeschränkt}
+    \item $K$ \textit{totalbeschränkt}, dann können die $x_j$ in $K$
+      gewählt werden
+    \item $K$ \textit{totalbeschränkt} $\implies K$ \textit{beschränkt}
+    \item $K$ voll. $\implies K$ \textit{abgeschlossen} in X
+    \item $K$ \textit{kompakt} $\implies K$ \textit{abgeschlossen} u.
+      \textit{beschränkt}
+    \item $K$ \textit{totalbeschränkt} $\implies K$
+      \textit{seperabel}
+    \item $K$ \textit{komapkt} $A \subset K \implies A$ \textit{rel. kompakt}
+  \end{enumerate}
+\end{bemerkung}
+
+\begin{satz}{Kompaktheit im endlichen}
+  $(X, \|\cdot\|)$ normierter Raum. Dann ist äquivalent
+  \begin{enumerate}[label = (\roman*)]
+    \item $dim\ X < \infty$
+    \item $B_X = \{x\in X: \|x\| \leq 1\} = \overline{B}(0,1)$ ist kompakt
+    \item Jede \textit{abgeschlossene} u. \textit{beschränkte} Teilmenge ist
+      \textit{kompakt}
+  \end{enumerate}
+\end{satz}
+
+\begin{satz}{Rieszsches Lemma}
+  $(X, \|\cdot\|)$ normierter Raum, $Y \neq X$ abg. UR, $\delta>0$\\
+  Dann $\exists x_{\delta} \in X, \|x_{\delta}\| = 1,  \|x_{\delta}-y\|
+  \geq 1-\delta \forall y \in Y$
+\end{satz}
+
+\begin{lemma}
+  $(X, \|\cdot\|)$ normierter Raum, $Y$ end. dim. UR.\\
+  Dann ist $Y$ abg. in $X$
+\end{lemma}
+
+\begin{satz}{Stetige Funktion auf Kompaktum}
+  $X,Y$ metr. R., $X$ \textit{kompakt}, $f:X\to Y$ stetig.\\
+  Dann ist $f$ glm stetig und $f(X)$ kompakt
+\end{satz}
+
+\begin{definition}{Gleichgradig Stetig}
+  $(K,d)$ metr. Raum, $K$ kompakt, $M \subset C(K)$\\
+  $M$ heißt gleichgradig Stetig, falls
+  $\forall \varepsilon >0 \exists \delta >0 \forall f \in M \forall s,t \in K:
+  (d(s,t) < \varepsilon \implies |f(s) - f(t)| < \varepsilon)$
+\end{definition}
+
+\begin{satz}{Arzela-Ascoli}
+  $(K,d)$ metr. Raum, $K$ kompakt, $M \subset C(K)$\\
+  $M$ \textit{beschränkt} u \textit{gleichgradig Stetig} $\implies$ $M$
+  \textit{rel. Komapkt}
+\end{satz}
