@@ -1,0 +1,86 @@
+\section{Hauptsätze}
+
+
+\subsection{Bairescher Kategoriensatz}
+  $(X,d)$ metr. R.
+
+\begin{definition}{Durchmesser}
+  $A \subset X,\diam A := \sup\{d(x,y), x,y\in A\} $
+\end{definition}
+
+\begin{lemma}
+  $(X,d)$ voll., $(A_n) \subset X$ \textit{abg.} mit
+  $\emptyset \neq A_{n+1} \subset A_n$ und $\diam A_n \to 0$
+  $\implies \cap_{n=1}^\infty A_n \neq \emptyset$
+\end{lemma}
+
+\begin{satz}{Satz von Baire}
+  $(X,d)$ voll., $(O_n) \subset X$ \textit{offen} und \textit{dicht}
+  $\implies \cap_{n=1}^\infty O_n \neq \emptyset$
+\end{satz}
+
+\begin{definition}{Kategorien}
+  \begin{enumerate}[label = (\roman*)]
+    \item $M \subset X$ \textbf{nirgends dicht},
+      falls $\inter \overline{A} = \emptyset$
+    \item $M \subset X$ \textbf{1. Kategorie}, falls $\exists (M_n) \subset X$
+      \textit{nirgends dicht}, $M = \cup_{n=1}^\infty M_n$
+    \item $M \subset X$ \textbf{2. Kategorie}, falls nicht von
+      \textit{1. Kategorie}
+  \end{enumerate}
+\end{definition}
+
+\begin{korrolar}
+  $(X,d)$ voll., $M \subset X$ \textit{1. Kategorie} $\implies M^C = X\\M$
+  \textit{dicht} in $X$
+\end{korrolar}
+
+\begin{korrolar}
+  Ein voll. metr. R. ist von \textit{2. Kategorie}:\\
+  $X = \cup_{n=1}^\infty A_n, A_n$ \textit{abg.}
+  $\implies \exists N \in \NN: \inter A_N \neq \emptyset$
+\end{korrolar}
+
+
+\subsection{Prinzip der glm. Beschränktheit}
+$X,Y$ norm. R.
+
+\begin{definition}{pkt., glm. Beschränktheit}
+  $J \subset L(X,Y)$
+  \begin{enumerate}[label = (\roman*)]
+    \item J \textbf{pkt. Beschränkt},
+      falls $\forall x\in X:\sup \{\|Tx\|:\ T \in J\} < \infty$
+    \item J \textbf{glm. Beschränkt},
+      falls $\sup \{\|T\|:\ T \in J\} < \infty$
+  \end{enumerate}
+\end{definition}
+
+\begin{satz}{Prinzip der glm. Beschränktheit}
+  $X$ \textit{voll.}, $J \subset L(X,Y)$ \textit{pkt. Beschränkt} $\implies J$
+  \textit{glm. Beschränkt}
+\end{satz}
+
+\begin{satz}{Banach-Steinhaus}
+  $X$ \textit{voll.}, $(T_n) \subset L(X,Y)$,
+  falls $\forall x\in X: Tx:= lim_{n\to \infty} T_nx$ ex.
+  $\implies T \in L(X,Y)$. u.
+  $\|T\| \leq \lim_{n\to \infty} \inf \|T_n\| < \infty$
+\end{satz}
+
+\begin{korrolar}
+  $X,Y$ \textit{voll.}, $(T_n) \subset L(X,Y)$. Es sind äq.
+  \begin{enumerate}[label = (\roman*)]
+    \item $\exists T \in L(X,Y): \forall x\in X Tx = \lim_{n\to\infty}T_nx$
+    \item $\sup_{n \in \NN} \|T_n\| <\infty $ u. $\exists D\subset X$
+      \textit{dicht} m. $\forall x\in D: (T_nx)$ \textit{CF}
+  \end{enumerate}
+\end{korrolar}
+
+\begin{definition}{starke Konvergenz}
+  $(T_n)\subset L(X,Y),\ T\in L(X,Y)$. $(T_n)$ \textbf{konvergiert stark}
+  gegen T, falls $\forall x\in X: Tx = \lim_{n\to\infty}T_nx$
+\end{definition}
+
+\begin{bemerkung}
+  \textit{Konvergenz Operatornorm} $\implies$ \textit{starke Konvergenz}
+\end{bemerkung}
