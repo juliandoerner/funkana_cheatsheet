@@ -84,3 +84,30 @@ $X,Y$ norm. R.
 \begin{bemerkung}
   \textit{Konvergenz Operatornorm} $\implies$ \textit{starke Konvergenz}
 \end{bemerkung}
+
+
+\subsection{Satz von der offenen Abbildung}
+$X,Y$ metr. R.
+
+\begin{definition}{offene Abbildung}
+  $f:X\to Y$ \textbf{offen}, falls $\forall O \in X$ \textit{offen}
+  $\implies f(O)$ \textit{offen}
+\end{definition}
+
+\begin{lemma}
+  $X,Y$ norm. R., $T:X \to Y$ lin. Dann sind äq.
+  \begin{enumerate}[label = (\roman*)]
+    \item $T$ \textit{offen}
+    \item $\exists \varepsilon > 0 : B(0,\varepsilon) \subset T(B(0,1))$
+  \end{enumerate}
+\end{lemma}
+
+\begin{satz}{Satz von der offenen Abbildung}
+  $X,Y$ voll. $T \in L(X,Y)$ \textit{surj.} $\implies T$ \textbf{offen}
+\end{satz}
+
+\begin{korrolar}
+  $(X,\|\cdot\|),(X,|||\cdot|||)$ \textit{voll.}
+  $\exists M > 0 \forall x\in X: \|x\| \leq M |||x|||
+  \implies \|\codt\|,|||\cdot|||$ \textbf{äq.}
+\end{korrolar}
