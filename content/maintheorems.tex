@@ -111,3 +111,41 @@ $X,Y$ metr. R.
   $\exists M > 0 \forall x\in X: \|x\| \leq M |||x|||
   \implies \|\cdot\|,|||\cdot|||$ \textbf{äq.}
 \end{korrolar}
+
+\subsection{Satz vom abgeschlossenen Graphen}
+$X,Y$ norm. R.
+
+\begin{definition}{Abgeschlossenen lin. Abbildung}
+  $D\subset X$ UR, $T:D \to Y$ lin.\\
+  $T$ heißt \textbf{agb.}, falls für $(x_n) \subset D, x_n \to x \in X$ u.
+  $Tx_n \to y \in Y \implies x \in D,\ Tx = y $
+\end{definition}
+
+\begin{definition}{Graph}
+  $D\subset X$ UR, $T:D \to Y$ lin.\\
+  $gr(T)=\{(x,Tx), x\in D \subset X \times Y$
+\end{definition}
+
+\begin{bemerkung}
+  \begin{enumerate}[label=(\roman*)]
+    \item $gr(T)$ ist \textit{UR} von $X \times Y$
+    \item $T$ \textit{abg.} $\Leftrightarrow gr(T)$ \textit{abg.} in
+      $X \times Y$ bzgl. \textbf{Produktnorm}
+      $|||\cdot||| = ||\cdot||_X + ||\cdot||_Y$
+  \end{enumerate}
+\end{bemerkung}
+
+\begin{lemma}
+  $X,Y$ \textit{voll.}, $D\subset X$ \textit{UR}, $T:D \to Y$ \textit{abg.}
+  Dann
+  \begin{enumerate}[label=(\roman*)]
+    \item $(D,|||\cdot|||_G)$ \textit{voll}, \textbf{Graphennorm}
+      $|||\cdot|||_G = ||\cdot||_X+||T\cdot||_Y$
+    \item $T\in L((D,|||\cdot|||_G) ,Y)$
+  \end{enumerate}
+\end{lemma}
+
+\begin{satz}{Satz vom abg. Graphen}
+  $X,Y$ voll., $T:X \to Y$ \textit{lin.}, \textit{abg.}
+  $\implies T\in L(X,Y)$
+\end{satz}
