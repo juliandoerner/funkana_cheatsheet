@@ -1,0 +1,216 @@
+\section{Hilbertraum}
+
+\subsection{Prähilbertraum u. Hilbertraum}
+
+\begin{definition}{Skalarprodukt}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ \textbf{Skalarprodukt}, falls
+  \begin{enumerate}[label=(\roman*)]
+    \item $(\lambda x +y,z) = \lambda (x,z) + (y,z),\ \forall \lambda \in \KK\
+      \forall x,y,z \in X$
+    \item $(x,y) = \overline{(y,x)},\ \forall x,y \in X $
+    \item $(x,x) \geq 0, (x,x) = 0 \Leftrightarrow x = 0, \forall x\in X$
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}{Prähilbertraum}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ Skalarprodukt, $(X,(\cdot,\cdot))$
+  \textbf{Prähilbertraum}
+\end{definition}
+
+\begin{definition}{Hilbertnorm}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ Skalarprodukt, $||\cdot|| =
+  \sqrt{(\cdot,\cdot)}$ \textbf{Hilbertnorm}
+\end{definition}
+
+\begin{satz}{CSU}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ Skalarprodukt
+  $\implies |(x,y)| \leq (x,x)(y,y) \forall x,y\in X $\\
+  $|(x,y)| = (x,x)(y,y) \Leftrightarrow x,y$ \textit{lin. unab.}
+\end{satz}
+
+\begin{definition}{Hilbertraum}
+  $X \KVR$ und bzgl. \textit{Hilbertnorm voll.}
+\end{definition}
+
+\begin{satz}{Parallelogramungungleichung/Polarisation}
+  $X$ norm. R. ($X$ \textit{Prähilbertraum} $\Leftrightarrow
+  ||x+y||^2 + ||x-y||^2 = 2||x||^2 + 2||y||^2,\ \forall x,y\in X$)
+\end{satz}
+
+\begin{satz}{Vervollständigung Prähilbertraum}
+  Sei $\hat{X}$ die \textit{Vervollständigung des Prähilbertraums}
+  $X \implies \hat{X}$ ist \textit{Hilbertraum}
+\end{satz}
+
+
+\subsection{Orthogonalität}
+
+\begin{definition}{orthogonal}
+  $X$ \textit{Prähilbertraum}, $x,y \in X$ \textbf{orthogonal},
+  falls $(x,y) = 0$\\
+  $A,B \subset X$ \textbf{orthogonal}, falls $x \perp y, \forall x\in A, y\in B$
+\end{definition}
+
+\begin{definition}{orth. Komplement}
+  $X$ \textit{Prähilbertraum}, $A \subset X,\ A^\perp = \{x\in X: x \perp a,
+  \forall a\in A\}$ \textbf{orth. Komplement}
+\end{definition}
+
+\begin{definition}{lin., orth. Projektion}
+  Eine \textit{lin. Projektion} $P$ heißt \textbf{orthogonal},
+  falls $N(P) \perp R(P)$
+\end{definition}
+
+\begin{bemerkung}
+  \begin{enumerate}[label=(\roman*)]
+    \item $x \perp y \implies ||x||^2 + ||y||^2 = ||x+y||^2$
+    \item $A^\perp$ \textit{abg. UR} von X
+    \item $x \perp x \Leftrightarrow x = 0$
+    \item $A \subset (A^\perp)^\perp$
+    \item $A \subset B \implies B^\perp \subset A^\perp$
+    \item $A^\perp = (\overline{\text{lin}A})^\perp$
+  \end{enumerate}
+\end{bemerkung}
+
+\begin{lemma}
+  $X$ \textit{Prähilbertraum}, $U \subset X$ \textit{dichter UR}, $x\in X:
+  (\forall u \in U: (x,u)=0 \implies x =0)$
+\end{lemma}
+
+\begin{satz}{Projektionssatz}
+  $H$ \textit{Hilbertraum}, $\emptyset \neq K$ \textit{abg., konvex},
+  $x_0 \in H$,
+  dann $\exists ! x\in K: ||x- x_0|| = \inf_{y \in K}||y -x_0||$
+\end{satz}
+
+\begin{lemma}
+  $H$ \textit{Hilbertraum}, $\emptyset \neq K\subset H$ \textit{abg., konvex},
+  $x_0 \in H, x\in K$. Dann ist äq.
+  \begin{enumerate}[label = (\roman*)]
+    \item $||x-x_0|| = \inf_{y\in K}||y-x_0||$
+    \item $Re(x_0-x,y-x) \leq 0,\ \forall y\in K$
+  \end{enumerate}
+\end{lemma}
+
+\begin{satz}{Orthogonalprojektion}
+  $H$ \textit{Hilbertraum}, $\{0\} \neq U \subset H$ \textit{abg. UR}, dann
+  ex. \textit{eindeutige, lineare Projektion} $P_U$ m. $||P_U|| = 1, R(P_U) = U,
+  N(P_U)=U^\perp$,\\
+  $||x-P_Ux|| = \inf_{y\in U}||x-y||, \forall x\in H, H = U \oplus U^\perp$.\\
+  $P_U$ \textbf{orthogonale Projektion}
+\end{satz}
+
+\begin{bemerkung}
+  $(U^\perp)^\perp = U, H/U = U^\perp$
+\end{bemerkung}
+
+\begin{korrolar}
+  $H$ \textit{Hilbertraum}, $U\subset H$ \textit{UR},
+  dann $\overline{U} = (U^\perp)^\perp$
+\end{korrolar}
+
+\begin{satz}{Darstellungssatz v. Fréchet-Riesz}
+  $H$ \textit{Hilbertraum}. $\phi:H \to H', y \mapsto (\cdot,y)$ ist
+  \textit{bijektiv, isometrisch u. konjugiert linear}, d.h.
+  $\forall x' \in H' \exists ! y \in H: x'(x) = (x,y), \forall x \in H,
+  ||x'|| = ||y||$
+\end{satz}
+
+\begin{bemerkung}
+  $H^*$ der VR der \textit{konjugiert-linearen Funktionale} $H\to \KK$,
+  dann ist $\phi^*:H \to H^*, x\mapsto (x,\cdot)$ \textit{isometrischer
+  Isomorphismus}\\
+  $H^*$ ist \textit{Hilbertraum} mit Skalarprodukt $(\varphi, \psi)_{H^*} :=
+  ((\phi^*)^{-1}\varphi,(\phi^*)^{-1}\psi )_H$
+\end{bemerkung}
+
+\begin{satz}{Lax-Milgram}
+  $H$ \textit{Hilbertraum}, $B:H \times H \to \KK$ \textit{sesquilinear} u.
+  \textit{stetig}, dann $\exists T \in L(H):B(x,y)=(Tx,y) \forall x,y \in H$
+\end{satz}
+
+
+\subsection{Orthonormalbasen}
+$H$ \textit{Hilbertraum}
+
+\begin{definition}{Orthonormalsystem}
+  $S\subset H$ \textbf{Orthonormalsystem}, falls $||e|| = 1, (e,f) = 0,
+  \forall e,f \in S, e \neq f$
+\end{definition}
+
+\begin{satz}{Besselsche Ungl. I}
+  $\{e_n: n\in N\} \subset H$ \textit{ONS}, $x\in H \implies \sum_{i=1}^\infty
+  |(x,e_n)|^2 \leq ||x||^2$
+\end{satz}
+
+\begin{lemma}
+  $\{e_n: n\in N\} \subset H$ \textit{ONS}, $x,y \in H \implies
+  \sum_{i=1}^\infty |(x,e_n)(e_n,y)| < \infty$
+\end{lemma}
+
+\begin{lemma}
+  $S\subset H$ \textit{ONS}, $x\in H \implies S_x := \{e\in S: (x,e)\neq 0\}$
+  \textit{höchstens abzählbar}
+\end{lemma}
+
+\begin{satz}{Besselsche Ungl. II}
+  $S\subset H$ \textit{ONS},
+  $x\in H \implies \sum_{e\in S} |(x,e)|^2 \leq ||x||^2$
+\end{satz}
+
+\begin{definition}{unbedingte Konvergenz}
+  $X$ norm. R., $I$ Indexmenge, $(x_i)_{i\in I} \subset X, x\in X$.\\
+  $\sum_{i\in I} x_i$ \textbf{konvergiert unbedingt} gegen $x$, falls
+  \begin{enumerate}[label=(\roman*)]
+    \item $I_0:=\{i\in I, x_i \neq 0\}$ \textit{höchst. abz.}
+    \item für Umordnung ${i_1,i_2,...}$ von $I_0: x = \sum_{n=1}^\infty x_{i_n}$
+  \end{enumerate}
+\end{definition}
+
+\begin{satz}{Orthogonalprojektion}
+  $S\subset H$ \textit{ONS}
+  \begin{enumerate}[label = (\roman*)]
+    \item $\forall x\in X: \sum_{e\in S}(x,e)e$ \textit{konvergiert unbedingt}
+    \item $P:H\to H, x\mapsto \sum_{e\in S}(x,e)e$ ist \uline{die}
+      \textit{Orthogonalprojektion} auf $\overline{linS}$
+  \end{enumerate}
+\end{satz}
+
+\begin{korrolar}
+  $S\subset H$ \textit{ONS}, dann sind äq.
+  \begin{enumerate}[label = (\roman*)]
+    \item $x\in H, x\perp S \implies x = 0$
+    \item $\overline{linS} = H$
+    \item $\forall x\in H: x = \sum_{e\in S}(x,e)e$
+    \item $\forall x,y\in H: (x,y) = \sum_{e\in S}(x,e)(e,y)$
+    \item $\forall x\in H: ||x||^2 = \sum_{e\in S}|(x,e)|^2$
+  \end{enumerate}
+\end{korrolar}
+
+\begin{definition}{Orthonormalbasis}
+  Ist eine der \textit{Bedingung} aus dem \textit{Korrolar} erfüllt, so heißt
+  $S$ \textbf{vollständiges ONS} oder \textbf{Orthonormalbasis} von $H$
+  (Schauderbasis)
+\end{definition}
+
+\begin{satz}{Hilbertraum ONB}
+  \begin{enumerate}[label=(\roman*)]
+    \item Jeder Hilbertraum besitzt eine \textbf{ONB}
+    \item $\{e_i,i\in I\}=S\subset H$ \textit{ONB} u.
+      $l^2(I,\KK):=\{ (\lambda_i)_{i\in I}\in \KK^I:
+      \sum_{i\in I}|\lambda_i|^2 < \infty \}$ m. \textit{Norm}
+      $||(\lambda_i)_{i\in I}||_{l^2(I,\KK)}
+      :=\sqrt{\sum_{i\in I}|\lambda_i|^2}$,
+      dann \textit{induziert} $e_i \mapsto (\delta_{ij})_{j\in I}$ einen
+      \textit{isometrischen Isomorphismus} $H\to l^2(I,\KK)$
+  \end{enumerate}
+\end{satz}
+
+\begin{bemerkung}
+  In \textit{unendlichdim. Hilberträumen} ist äq.\\
+  $H$ \textit{seperabel}
+  \begin{enumerate}[label = $\Leftrightarrow$]
+    \item eine (alle) \textit{ONB} ist abz.
+    \item $H \simeq l^2(\NN,\KK)$
+  \end{enumerate}
+\end{bemerkung}
