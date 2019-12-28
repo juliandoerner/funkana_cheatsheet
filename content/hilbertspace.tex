@@ -128,3 +128,89 @@
   $H$ \textit{Hilbertraum}, $B:H \times H \to \KK$ \textit{sesquilinear} u.
   \textit{stetig}, dann $\exists T \in L(H):B(x,y)=(Tx,y) \forall x,y \in H$
 \end{satz}
+
+
+\subsection{Orthonormalbasen}
+$H$ \textit{Hilbertraum}
+
+\begin{definition}{Orthonormalsystem}
+  $S\subset H$ \textbf{Orthonormalsystem}, falls $||e|| = 1, (e,f) = 0,
+  \forall e,f \in S, e \neq f$
+\end{definition}
+
+\begin{satz}{Besselsche Ungl. I}
+  $\{e_n: n\in N\} \subset H$ \textit{ONS}, $x\in H \implies \sum_{i=1}^\infty
+  |(x,e_n)|^2 \leq ||x||^2$
+\end{satz}
+
+\begin{lemma}
+  $\{e_n: n\in N\} \subset H$ \textit{ONS}, $x,y \in H \implies
+  \sum_{i=1}^\infty |(x,e_n)(e_n,y)| < \infty$
+\end{lemma}
+
+\begin{lemma}
+  $S\subset H$ \textit{ONS}, $x\in H \implies S_x := \{e\in S: (x,e)\neq 0\}$
+  \textit{höchstens abzählbar}
+\end{lemma}
+
+\begin{satz}{Besselsche Ungl. II}
+  $S\subset H$ \textit{ONS},
+  $x\in H \implies \sum_{e\in S} |(x,e)|^2 \leq ||x||^2$
+\end{satz}
+
+\begin{definition}{unbedingte Konvergenz}
+  $X$ norm. R., $I$ Indexmenge, $(x_i)_{i\in I} \subset X, x\in X$.\\
+  $\sum_{i\in I} x_i$ \textbf{konvergiert unbedingt} gegen $x$, falls
+  \begin{enumerate}[label=(\roman*)]
+    \item $I_0:=\{i\in I, x_i \neq 0\}$ \textit{höchst. abz.}
+    \item für Umordnung ${i_1,i_2,...}$ von $I_0: x = \sum_{n=1}^\infty x_{i_n}$
+  \end{enumerate}
+\end{definition}
+
+\begin{satz}{Orthogonalprojektion}
+  $S\subset H$ \textit{ONS}
+  \begin{enumerate}[label = (\roman*)]
+    \item $\forall x\in X: \sum_{e\in S}(x,e)e$ \textit{konvergiert unbedingt}
+    \item $P:H\to H, x\mapsto \sum_{e\in S}(x,e)e$ ist \uline{die}
+      \textit{Orthogonalprojektion} auf $\overline{linS}$
+  \end{enumerate}
+\end{satz}
+
+\begin{korrolar}
+  $S\subset H$ \textit{ONS}, dann sind äq.
+  \begin{enumerate}[label = (\roman*)]
+    \item $x\in H, x\perp S \implies x = 0$
+    \item $\overline{linS} = H$
+    \item $\forall x\in H: x = \sum_{e\in S}(x,e)e$
+    \item $\forall x,y\in H: (x,y) = \sum_{e\in S}(x,e)(e,y)$
+    \item $\forall x\in H: ||x||^2 = \sum_{e\in S}|(x,e)|^2$
+  \end{enumerate}
+\end{korrolar}
+
+\begin{definition}{Orthonormalbasis}
+  Ist eine der \textit{Bedingung} aus dem \textit{Korrolar} erfüllt, so heißt
+  $S$ \textbf{vollständiges ONS} oder \textbf{Orthonormalbasis} von $H$
+  (Schauderbasis)
+\end{definition}
+
+\begin{satz}{Hilbertraum ONB}
+  \begin{enumerate}[label=(\roman*)]
+    \item Jeder Hilbertraum besitzt eine \textbf{ONB}
+    \item $\{e_i,i\in I\}=S\subset H$ \textit{ONB} u.
+      $l^2(I,\KK):=\{ (\lambda_i)_{i\in I}\in \KK^I:
+      \sum_{i\in I}|\lambda_i|^2 < \infty \}$ m. \textit{Norm}
+      $||(\lambda_i)_{i\in I}||_{l^2(I,\KK)}
+      :=\sqrt{\sum_{i\in I}|\lambda_i|^2}$,
+      dann \textit{induziert} $e_i \mapsto (\delta_{ij})_{j\in I}$ einen
+      \textit{isometrischen Isomorphismus} $H\to l^2(I,\KK)$
+  \end{enumerate}
+\end{satz}
+
+\begin{bemerkung}
+  In \textit{unendlichdim. Hilberträumen} ist äq.\\
+  $H$ \textit{seperabel}
+  \begin{enumerate}[label = $\Leftrightarrow$]
+    \item eine (alle) \textit{ONB} ist abz.
+    \item $H \simeq l^2(\NN,\KK)$
+  \end{enumerate}
+\end{bemerkung}
