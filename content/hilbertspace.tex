@@ -1,0 +1,43 @@
+\section{Hilbertraum}
+
+\subsection{Prähilbertraum u. Hilbertraum}
+
+\begin{definition}{Skalarprodukt}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ \textbf{Skalarprodukt}, falls
+  \begin{enumerate}[label=(\roman*)]
+    \item $(\lambda x +y,z) = \lambda (x,z) + (y,z),\ \forall \lambda \in \KK\
+      \forall x,y,z \in X$
+    \item $(x,y) = \overline{(y,x)},\ \forall x,y \in X $
+    \item $(x,x) \geq 0, (x,x) = 0 \Leftrightarrow x = 0, \forall x\in X$
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}{Prähilbertraum}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ Skalarprodukt, $(X,(\cdot,\cdot))$
+  \textbf{Prähilbertraum}
+\end{definition}
+
+\begin{definition}{Hilbertnorm}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ Skalarprodukt, $||\cdot|| =
+  \sqrt{(\cdot,\cdot)}$ \textbf{Hilbertnorm}
+\end{definition}
+
+\begin{satz}{CSU}
+  $X \KVR, (\cdot,\cdot):X \times X \to \KK$ Skalarprodukt
+  $\implies |(x,y)| \leq (x,x)(y,y) \forall x,y\in X $\\
+  $|(x,y)| = (x,x)(y,y) \Leftrightarrow x,y$ \textit{lin. unab.}
+\end{satz}
+
+\begin{definition}{Hilbertraum}
+  $X \KVR$ und bzgl. \textit{Hilbertnorm voll.}
+\end{definition}
+
+\begin{satz}{Parallelogramungungleichung/Polarisation}
+  $X$ norm. R. ($X$ \textit{Prähilbertraum} $\Leftrightarrow
+  ||x+y||^2 + ||x-y||^2 = 2||x||^2 + 2||y||^2,\ \forall x,y\in X$)
+\end{satz}
+
+\begin{satz}{Vervollständigung Prähilbertraum}
+  Sei $\hat{X}$ die Vervollständigung des Prähilbertraums $X \implies \hat{X}$
+  ist \textit{Hilbertraum}
+\end{satz}
