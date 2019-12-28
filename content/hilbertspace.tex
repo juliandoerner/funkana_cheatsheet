@@ -38,6 +38,93 @@
 \end{satz}
 
 \begin{satz}{Vervollständigung Prähilbertraum}
-  Sei $\hat{X}$ die Vervollständigung des Prähilbertraums $X \implies \hat{X}$
-  ist \textit{Hilbertraum}
+  Sei $\hat{X}$ die \textit{Vervollständigung des Prähilbertraums}
+  $X \implies \hat{X}$ ist \textit{Hilbertraum}
+\end{satz}
+
+
+\subsection{Orthogonalität}
+
+\begin{definition}{orthogonal}
+  $X$ \textit{Prähilbertraum}, $x,y \in X$ \textbf{orthogonal},
+  falls $(x,y) = 0$\\
+  $A,B \subset X$ \textbf{orthogonal}, falls $x \perp y, \forall x\in A, y\in B$
+\end{definition}
+
+\begin{definition}{orth. Komplement}
+  $X$ \textit{Prähilbertraum}, $A \subset X,\ A^\perp = \{x\in X: x \perp a,
+  \forall a\in A\}$ \textbf{orth. Komplement}
+\end{definition}
+
+\begin{definition}{lin., orth. Projektion}
+  Eine \textit{lin. Projektion} $P$ heißt \textbf{orthogonal},
+  falls $N(P) \perp R(P)$
+\end{definition}
+
+\begin{bemerkung}
+  \begin{enumerate}[label=(\roman*)]
+    \item $x \perp y \implies ||x||^2 + ||y||^2 = ||x+y||^2$
+    \item $A^\perp$ \textit{abg. UR} von X
+    \item $x \perp x \Leftrightarrow x = 0$
+    \item $A \subset (A^\perp)^\perp$
+    \item $A \subset B \implies B^\perp \subset A^\perp$
+    \item $A^\perp = (\overline{\text{lin}A})^\perp$
+  \end{enumerate}
+\end{bemerkung}
+
+\begin{lemma}
+  $X$ \textit{Prähilbertraum}, $U \subset X$ \textit{dichter UR}, $x\in X:
+  (\forall u \in U: (x,u)=0 \implies x =0)$
+\end{lemma}
+
+\begin{satz}{Projektionssatz}
+  $H$ \textit{Hilbertraum}, $\emptyset \neq K$ \textit{abg., konvex},
+  $x_0 \in H$,
+  dann $\exists ! x\in K: ||x- x_0|| = \inf_{y \in K}||y -x_0||$
+\end{satz}
+
+\begin{lemma}
+  $H$ \textit{Hilbertraum}, $\emptyset \neq K\subset H$ \textit{abg., konvex},
+  $x_0 \in H, x\in K$. Dann ist äq.
+  \begin{enumerate}[label = (\roman*)]
+    \item $||x-x_0|| = \inf_{y\in K}||y-x_0||$
+    \item $Re(x_0-x,y-x) \leq 0,\ \forall y\in K$
+  \end{enumerate}
+\end{lemma}
+
+\begin{satz}{Orthogonalprojektion}
+  $H$ \textit{Hilbertraum}, $\{0\} \neq U \subset H$ \textit{abg. UR}, dann
+  ex. \textit{eindeutige, lineare Projektion} $P_U$ m. $||P_U|| = 1, R(P_U) = U,
+  N(P_U)=U^\perp$,\\
+  $||x-P_Ux|| = \inf_{y\in U}||x-y||, \forall x\in H, H = U \oplus U^\perp$.\\
+  $P_U$ \textbf{orthogonale Projektion}
+\end{satz}
+
+\begin{bemerkung}
+  $(U^\perp)^\perp = U, H/U = U^\perp$
+\end{bemerkung}
+
+\begin{korrolar}
+  $H$ \textit{Hilbertraum}, $U\subset H$ \textit{UR},
+  dann $\overline{U} = (U^\perp)^\perp$
+\end{korrolar}
+
+\begin{satz}{Darstellungssatz v. Fréchet-Riesz}
+  $H$ \textit{Hilbertraum}. $\phi:H \to H', y \mapsto (\cdot,y)$ ist
+  \textit{bijektiv, isometrisch u. konjugiert linear}, d.h.
+  $\forall x' \in H' \exists ! y \in H: x'(x) = (x,y), \forall x \in H,
+  ||x'|| = ||y||$
+\end{satz}
+
+\begin{bemerkung}
+  $H^*$ der VR der \textit{konjugiert-linearen Funktionale} $H\to \KK$,
+  dann ist $\phi^*:H \to H^*, x\mapsto (x,\cdot)$ \textit{isometrischer
+  Isomorphismus}\\
+  $H^*$ ist \textit{Hilbertraum} mit Skalarprodukt $(\varphi, \psi)_{H^*} :=
+  ((\phi^*)^{-1}\varphi,(\phi^*)^{-1}\psi )_H$
+\end{bemerkung}
+
+\begin{satz}{Lax-Milgram}
+  $H$ \textit{Hilbertraum}, $B:H \times H \to \KK$ \textit{sesquilinear} u.
+  \textit{stetig}, dann $\exists T \in L(H):B(x,y)=(Tx,y) \forall x,y \in H$
 \end{satz}
