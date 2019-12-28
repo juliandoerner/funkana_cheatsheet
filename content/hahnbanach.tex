@@ -114,3 +114,37 @@ $1\leq p < \infty, \frac{1}{p}+\frac{1}{q} = 1, (S,\SA,\mu)\
 Die Abb. $J: L^q(\mu) \to (L^p(\mu))', (Jg)(f) = \int_S fg\ d\mu$ ist ein
 \textit{isometrischer Isomorphismus}\\
 $(L^p(\mu))' \simeq L^q(\mu)$
+
+
+\subsection{Hahn Banach \textit{geometrische V.}}
+
+\begin{definition}{Minkowski-Funktional}
+  $X \KVR, A \subset X, p_A:X \to [0,\infty],
+  x \mapsto \inf\{\lambda > 0: x \in \lambda A\}$, \textbf{Minkowski Funtkional}
+\end{definition}
+
+\begin{lemma}
+  $X$ norm. R. $A \subset X$ konvex m. $(0 \in \inter A \Leftrightarrow
+  \exists \delta > 0: \overline{B}(0,\delta) \subset A)$, dann
+  \begin{enumerate}[label = (\roman*)]
+    \item $\exists \delta >0: p_A(x) \leq \frac{1}{\delta} ||x|| \forall x\in X$
+    \item $p_a$ \textit{sublinear}
+    \item $A$ \textit{offen} $\implies (p_A)^{-1}([0,1]) = A$
+  \end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+  $X$ norm. R., $V \subset X$ konvex, offen u. $0 \not\in V \implies \exists
+  x' \in X': Re\ x'(x) <0 \forall x \in V$
+\end{lemma}
+
+\begin{satz}{Hahn-Banach \textit{Trennungsversion I}}
+  $X$ norm. R., $U_1, U_2 \subset X$ konvex, $U_1$ offen,
+  $U_1 \cap U_2 = \emptyset \implies \exists x' \in X':
+  Re(x'(u_1))<Re(x'(u_2)) \forall u_1\in U_1,u_2\in U_2$
+\end{satz}
+
+\begin{satz}{Hahn-Banach \textit{Trennungsversion II}}
+  $X$ norm. R., $U \subset X$ abg. konvex, $x_0 \not\in U \implies
+  \exists x' \in X': Re(x'(x_0)) < \inf_{u\in U}Re(x'(u))$
+\end{satz}
