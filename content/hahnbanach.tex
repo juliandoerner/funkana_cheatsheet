@@ -1,0 +1,150 @@
+\section{Satz von Hahn-Banach}
+
+
+\subsection{Fortsetzung von Funktionalen}
+
+\begin{definition}{sublinear}
+  $X\KVR$, $p:X\to\RR$ \textbf{sublinear}, falls
+  \begin{enumerate}[label = (\arabic*)]
+    \item $p(\lambda x) = \lambda p(x),\
+      \forall x \in X \forall \lambda \geq 0$ \textit{(positiv homogen)}
+    \item $p(x+y) \leq p(x) + p(y),\ \forall x,y \in X$ \textit{(subadditiv)}
+  \end{enumerate}
+\end{definition}
+
+\begin{satz}{Hahn-Banach \textit{reelle V.}}
+  $X \RVR, U \subset X$ \textit{UR}, $p:X\to \RR$ \textit{sublinear},
+  $l:U \to \RR$ \textit{linear} m. $l(x) \leq p(x), \forall x\in U$
+  $\implies \exists L:X\to \RR$ \textit{linear} mit $L_{|U} = l,\
+  L(x) \leq p(x) \forall x\in X$
+\end{satz}
+
+\begin{lemma}
+  $X \CVR$
+  \begin{enumerate}[label = (\roman*)]
+    \item $l:X \to \RR, \RR$-linear $\tilde{l}(x):=l(x) -il(ix) \implies
+      \tilde{l}\ \CC$-linear, $Re\ \tilde{l} = l$
+    \item $\tilde{l}:X \to \CC, \CC$-linear
+      $l:=Re\ \tilde{l} \implies l\ \RR$-linear
+    \item $p:X\to \RR$ Halbnorm, $l:X\to \CC, \CC$-linear, dann
+      $|l(x)| \leq p(x) \Leftrightarrow |Re\ l(x)| \leq p(x),\ \forall x\in X$
+    \item $X$ norm. kompl. R., $l:X \to \CC, \CC$-linear und stetig
+      $\implies ||l|| = ||Re\ l||$
+  \end{enumerate}
+\end{lemma}
+
+\begin{satz}{Hahn-Banach \textit{komplexe V.}}
+  $X \CVR, U \subset X$ \textit{UR}, $p:X\to \RR$ \textit{sublinear},
+  $l:U \to \CC$ \textit{linear} m. $Re\ l(x) \leq p(x), \forall x\in U$
+  $\implies \exists L:X\to \CC$ \textit{linear} mit $L_{|U} = l,\
+  Re\ L(x) \leq p(x) \forall x\in X$
+\end{satz}
+
+\begin{satz}{Hahn-Banach \textit{Fortsetzungsversion}}
+  $X$ norm. R., $U\subset X$ UR. $\forall \varphi \in L(U,\KK):
+  \exists \phi \in L(X,\KK)$ m. $\phi_{|U} = \phi, ||\phi|| = ||\varphi||$
+\end{satz}
+
+\begin{bemerkung}
+  \begin{enumerate}[label = (\roman*)]
+    \item \textbf{Fortsetzungen} sind im alg. \textbf{nicht eindeutig}
+    \item \textbf{Fortsetzungen} ex. im alg. nur für  \textbf{Funktionale}
+  \end{enumerate}
+\end{bemerkung}
+
+\begin{korrolar}
+  $X$ norm. R., $x \in X$
+  \begin{enumerate}[label = (\roman*)]
+    \item $x\neq 0, \exists x' \in X': ||x'|| = 1, x'(x) = ||x||$
+      außerdem $\forall x_1,x_2\in X, x_1 \neq x_2 \exists x' \in X:
+      x'(x_1) \neq x'(x_2)$
+    \item $||x|| = \sup_{x' \in B_{X'}} |x'(x)|$
+    \item $U \subset X$ abg. UR, $x \not\in U \implies \exists x' \in X':
+      x'_{|U} = 0, x'(x) \neq 0$
+    \item $U \subset X$ UR, dann: $U$ dicht in $X \Leftrightarrow
+      \forall x'\in X':(x'_{|U} = 0 \implies x' = 0)$
+  \end{enumerate}
+\end{korrolar}
+
+
+\subsection{Dualräume}
+
+\subsubsection*{DR von Quotientenräumen}
+
+\begin{definition}{Anihilator}
+  $X$ norm. R., $U \subset X, V\subset X'$
+
+  \begin{enumerate}[label = (\roman*)]
+    \item $U^{\perp} = \{x' \in X': x'(x)=0, \forall x\in U\}$
+      \textbf{Annihilator von $U$ in $X'$}
+    \item $V_{\perp} = \{x \in X: x'(x)=0, \forall x'\in V\}$
+      \textbf{Annihilator von $V$ in $X$}
+  \end{enumerate}
+\end{definition}
+
+\begin{bemerkung}
+  $U^{\perp}, V_{\perp}$ sind jeweils \textbf{abg. UR}
+\end{bemerkung}
+
+\fheel
+
+
+$X$ norm. R., $U\subset X$ abg. UR.\\
+Es ex. ein \textit{kanonischer isometrischer Isomorphismus} so, dass\\
+$(X/U)' \simeq U^{\perp}$\\
+$ U' \simeq X'/U^{\perp}$\\
+
+\begin{satz}{seperabler DR}
+  Ein norm. R. mit \textit{seperablem DR} ist seperabel
+\end{satz}
+
+\subsubsection*{DR von Folgenräumen}
+
+$1\leq p < \infty, \frac{1}{p}+\frac{1}{q} = 1$.\\
+Die Abb. $J:l^p \to (l^q)', Jy(x)=\sum_{j=1}^\infty x_jy_j$ ist ein
+\textit{isometrischer Isomorphismus}\\
+Die selbe Abb. liefert \textit{isometrischen Isomorphismus} $J:l^1 \to (c_0)'$\\
+$(l^p)' \simeq l^q$\\
+$(c_0)' \simeq l^1$\\
+$(l^\infty)' \not\simeq l^1$
+
+\subsubsection*{DR von Lebesqueräumen}
+$1\leq p < \infty, \frac{1}{p}+\frac{1}{q} = 1, (S,\SA,\mu)\
+\sigma$-end. Maßraum\\
+Die Abb. $J: L^q(\mu) \to (L^p(\mu))', (Jg)(f) = \int_S fg\ d\mu$ ist ein
+\textit{isometrischer Isomorphismus}\\
+$(L^p(\mu))' \simeq L^q(\mu)$
+
+
+\subsection{Hahn Banach \textit{geometrische V.}}
+
+\begin{definition}{Minkowski-Funktional}
+  $X \KVR, A \subset X, p_A:X \to [0,\infty],
+  x \mapsto \inf\{\lambda > 0: x \in \lambda A\}$, \textbf{Minkowski Funtkional}
+\end{definition}
+
+\begin{lemma}
+  $X$ norm. R. $A \subset X$ konvex m. $(0 \in \inter A \Leftrightarrow
+  \exists \delta > 0: \overline{B}(0,\delta) \subset A)$, dann
+  \begin{enumerate}[label = (\roman*)]
+    \item $\exists \delta >0: p_A(x) \leq \frac{1}{\delta} ||x|| \forall x\in X$
+    \item $p_a$ \textit{sublinear}
+    \item $A$ \textit{offen} $\implies (p_A)^{-1}([0,1]) = A$
+  \end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+  $X$ norm. R., $V \subset X$ konvex, offen u. $0 \not\in V \implies \exists
+  x' \in X': Re\ x'(x) <0 \forall x \in V$
+\end{lemma}
+
+\begin{satz}{Hahn-Banach \textit{Trennungsversion I}}
+  $X$ norm. R., $U_1, U_2 \subset X$ konvex, $U_1$ offen,
+  $U_1 \cap U_2 = \emptyset \implies \exists x' \in X':
+  Re(x'(u_1))<Re(x'(u_2)) \forall u_1\in U_1,u_2\in U_2$
+\end{satz}
+
+\begin{satz}{Hahn-Banach \textit{Trennungsversion II}}
+  $X$ norm. R., $U \subset X$ abg. konvex, $x_0 \not\in U \implies
+  \exists x' \in X': Re(x'(x_0)) < \inf_{u\in U}Re(x'(u))$
+\end{satz}
