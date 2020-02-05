@@ -1,0 +1,79 @@
+\section{Sobolevräume}
+
+\(\Omega \subset \RR^n \text{ offen}\)\\
+\(L_{loc}^1(\Omega) = \{f:\Omega \to \KK \text{ mb: }
+f\indicator_K \in L^1(\Omega),\ K\subset \Omega \text{ kpt.}\}\) \\
+\(\supp\varphi = \{x\in \Omega: \varphi(x) \neq 0\}\)\\
+\(C_c^\infty(\Omega)=\{\varphi:\Omega \to \KK \in C^\infty: 
+\supp\varphi\subset\Omega \text{ kpt.}\}\)\\
+
+\begin{definition}{schwache Ableitung}
+    \(\Omega \subset \RR^n\) Gebiet,
+    \(f\in L^1_{lov}(\Omega), j\in \{1,..,n\}\)\\
+    Existiert \(g \in L^1_{loc}(\Omega):\)
+    \[
+        \int_\Omega f\cdot \partial_j\varphi dx =
+         - \int_\Omega g\cdot \varphi dxm, \ \ 
+         \forall \varphi\in C_c^{\infty}(\Omega),
+    \]
+    dann heißt \(f\) schwach nach \(x_j\) ableitbar, und \(\partial_jf=g\) ist
+    die \textbf{schwache Ableitung} in Richtung \(x_j\).
+
+\end{definition}
+
+\begin{definition}{Faltung}
+    Für \(f,g:\RR^n \to \KK\) ist
+    \[
+        (f\ast g )(x) = \int_{\RR^n}f(y)g(x-y)dy
+        = \int_{\RR^n}f(x-y)g(y)dy
+    \] 
+    die Faltung von \(f\) und \(g\).
+\end{definition}
+
+\begin{lemma}
+    \(f\in L_{loc}^1(\RR^n),\ \varphi\in C_c^{\infty}(\RR^n), 
+    \alpha \in \NN_0^n\)
+    \begin{enumerate}[label = (\roman*)]
+        \item \(f\ast \varphi \in C^\infty(R^n),\ 
+            \partial^\alpha(f\ast \varphi) = f\ast \partial^\alpha\varphi\)
+        \item \(p\in [1,\infty),\ f\in L^p(\RR^n)\)\\
+            \(\supp\varphi \subset B(0,1)\)\\
+            \(\int_{\RR^n}\varphi(x)dx = 1\)\\
+            \(\varphi_k(x):=k^n\varphi(kx), k\in\NN\)\\
+            Dann ist \(f\ast \varphi_k \in L^p(\RR^n)\) und\\
+            \(\|f\ast \varphi_k -f\|\to 0\)
+    \end{enumerate}
+\end{lemma}
+
+\begin{korrolar}
+    Ist \(g\in L_{loc}^1(\Omega)\) mit \(\int_\Omega g\varphi dx = 0,
+    \forall \varphi \in C_c^\infty(\Omega)\), dann ist \(g=0\) f.ü.
+\end{korrolar}
+    
+\begin{definition}{Sobolevraum}
+    \(\Omega \subset \RR^n\) Gebiet, \(p \in [1,\infty]\)
+    \begin{enumerate}[label=(\roman*)]
+        \item \(W^{1,p}(\Omega) = \{
+            f\in L^p(\Omega):\partial_jf\text{ ex. u. } \partial_j f
+            \in L^p(\Omega),\forall j\in\{1\dots,n\}\})\) heißt der Sobolevraum
+            1. Ordnung
+        \item \(W^{m,p}(\Omega) = \{f\in L^p(\Omega):\partial^\alpha f 
+            \text{ ex. u. } \partial^\alpha f \in L^p(\Omega),
+            \forall\alpha\in\NN_0^n, |\alpha|\leq m\}\) heißt der Sobolevraum
+            m. Ordnung
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}{Norm - SR. 1. Ordnung}
+
+    \begin{enumerate}[label=(\roman*)]
+        \item \(p\in [1,\infty)\):\\
+            \( \|f\|_{W^{1,p}} = (\|f\|_p^p +
+            \sum_{j=1}^{n}\|\partial_jf\|_p^p)^{\frac{1}{p}} \)
+        \item \(p = \inf\):\\
+            \( \|f\|_{W^{1,p}} =
+            \max\{\|f\|_\infty, \|\partial_1f\|_\infty, \dots,
+            \|\partial_nf\|_\infty\} \)
+    \end{enumerate}
+\end{definition}
+
