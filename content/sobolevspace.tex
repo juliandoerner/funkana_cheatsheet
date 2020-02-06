@@ -11,11 +11,11 @@ f\indicator_K \in L^1(\Omega),\ K\subset \Omega \text{ kpt.}\}\) \\
     \(\Omega \subset \RR^n\) Gebiet,
     \(f\in L^1_{lov}(\Omega), j\in \{1,..,n\}\)\\
     Existiert \(g \in L^1_{loc}(\Omega):\)
-    \[
+    \(
         \int_\Omega f\cdot \partial_j\varphi dx =
          - \int_\Omega g\cdot \varphi dxm, \ \ 
          \forall \varphi\in C_c^{\infty}(\Omega),
-    \]
+    \)
     dann heißt \(f\) schwach nach \(x_j\) ableitbar, und \(\partial_jf=g\) ist
     die \textbf{schwache Ableitung} in Richtung \(x_j\).
 
@@ -23,10 +23,10 @@ f\indicator_K \in L^1(\Omega),\ K\subset \Omega \text{ kpt.}\}\) \\
 
 \begin{definition}{Faltung}
     Für \(f,g:\RR^n \to \KK\) ist
-    \[
+    \(
         (f\ast g )(x) = \int_{\RR^n}f(y)g(x-y)dy
         = \int_{\RR^n}f(x-y)g(y)dy
-    \] 
+    \) 
     die Faltung von \(f\) und \(g\).
 \end{definition}
 
@@ -76,4 +76,39 @@ f\indicator_K \in L^1(\Omega),\ K\subset \Omega \text{ kpt.}\}\) \\
             \|\partial_nf\|_\infty\} \)
     \end{enumerate}
 \end{definition}
+
+\begin{satz}{Vollständige Sobolevräume}
+    Für \(m \in \NN,\ p\in [1,\infty]\) ist
+    \((W^{m,p}(\Omega),\|\cdot\|_{W^{m,p}})\) ein Banachraum.\\
+    Weiter ist \(W^{m,2}(\Omega)=H^m(\Omega)\) ist Hilbertraum mit Skalarprodukt
+    \((f,g)_{H^m(\Omega)}=\sum_{|\alpha|\leq m}
+    (\partial^\alpha f,\partial^\alpha g)_{L^2(\Omega)}\)
+\end{satz}
+
+\begin{lemma}
+    Sei \(\Omega \subset \RR^n\) Gebiet, \(f\in L_{loc}^1(\Omega)\) mit
+    \(\partial_jf\in L_{loc}^1(\Omega), j=1,\dots,n,\ g\in
+    C^\infty(\Omega)\).
+    Dann ex. \(\partial_j(fg), j=1,\dots,n\) in \(\Omega\) und 
+    \(\partial_j(fg)= (\partial_jf)g + f(\partial_jg), j=1,\dots,n\)
+\end{lemma}
+
+\begin{bemerkung}
+    Für \(p\in [1,\infty], f\in W^{1,p}(\Omega),\ 
+    g\in W^{1,p'}(\Omega)\) gilt \(fg\in W^{1,1}(\Omega)\) und
+    \(\partial_j(fg)= (\partial_jf)g + f(\partial_jg), j=1,\dots,n\)
+\end{bemerkung}
+
+\begin{bemerkung}
+    Für \(f\in L_{loc}^1(\RR^n),\ \alpha \in \NN_0^n\) ex.
+    \(\partial^\alpha f\) in \(\RR^n\), dann gilt
+    \(\forall\varphi\in C_c^\infty:\ \partial^\alpha(f\ast \varphi) = 
+    \partial^\alpha f \ast \varphi\) 
+\end{bemerkung}
+
+\begin{satz}{Dicht im SR}
+    Für \(p\in [1,\infty),\ m\in\NN\) ist \(C_c^\infty(\RR^n)\) dicht in
+    \(W^{m,p}(\RR^n)\)
+\end{satz}
+
 
