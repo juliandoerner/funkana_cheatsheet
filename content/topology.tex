@@ -123,10 +123,10 @@ $X,Y$ metr. R., $f:X\to Y$\\
 \begin{definition}{Stetigkeit}
   \begin{enumerate}[label = (\arabic*)]
     \item  f heißt \textbf{stetig}, falls\\
-      $\forall O \subset Y \text{ offen } \implies f^{-1}(O) \text{ offen }$
+      $\forall O \subset Y$ offen $\implies f^{-1}(O)$ offen.
     \item f heißt \textbf{stetig in} $x_0 \in X$, falls\\
-      $\forall V \subset Y \text{ Umgebung v. } f(x_0) \exists
-      U \subset X \text{ Umgebung v. } x_0: f(U) \subset V$
+      $\forall V \subset Y$ Umgebung v. $f(x_0)$ ex.
+      $U \subset X$ Umgebung v. $x_0$ mit $f(U) \subset V$
   \end{enumerate}
 \end{definition}
 
@@ -167,18 +167,18 @@ $X,Y$ metr. R., $f:X\to Y$\\
 
 \subsection{Äquivalente Normen}
 
-$(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
+$(\|\cdot\|, X), (|||\cdot|||, X)$ normierte Räume\\
 
 \begin{definition}{Äquivalente Normen}
-  $\|\cdot\|, \||\cdot\||$ sind äquivalent, falls
-  $\exists c,C>0 \forall x\in X: c\|x\| \leq \||x\|| \leq C \|x\|$
+  $\|\cdot\|, |||\cdot|||$ sind äquivalent, falls
+  $\exists c,C>0 \forall x\in X: c\|x\| \leq |||x||| \leq C \|x\|$
 \end{definition}
 
 \begin{satz}{äq. Normen und GWe}
   \begin{enumerate}[label = $\Leftrightarrow$]
-    \item $\|\cdot\|, \||\cdot\||$ äquivalent
-    \item $\|\cdot\|, \||\cdot\||$ haben die \textit{gleichen konv. Folgen}
-    \item $\|\cdot\|, \||\cdot\||$ haben die \textit{gleichen Nullfolgen}
+    \item $\|\cdot\|, |||\cdot|||$ äquivalent
+    \item $\|\cdot\|, |||\cdot|||$ haben die \textit{gleichen konv. Folgen}
+    \item $\|\cdot\|, |||\cdot|||$ haben die \textit{gleichen Nullfolgen}
   \end{enumerate}
 \end{satz}
 
@@ -187,10 +187,10 @@ $(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
   \begin{enumerate}[label = (\roman*)]
     \item $(X,d_1),(X,d_2)$ metr. Räume mit den selben konv. Folgen
       $\not\Rightarrow$ dieselben CF
-    \item Sind $\|\cdot\|, \||\cdot\||$ äquivalent, dann haben die Räume die
+    \item Sind $\|\cdot\|, |||\cdot|||$ äquivalent, dann haben die Räume die
       \textit{gleichen} offenen (abgl.) Mengen
-    \item Sind $\|\cdot\|, \||\cdot\||$ äquivalent, dann gilt
-      $(X,\|\cdot\|)$ voll. $\Leftrightarrow$ $(X,\||\cdot\||)$ voll.
+    \item Sind $\|\cdot\|, |||\cdot|||$ äquivalent, dann gilt
+      $(X,\|\cdot\|)$ voll. $\Leftrightarrow$ $(X,|||\cdot|||)$ voll.
     \item In end. dim. Räumen sind alle Normen äq.
   \end{enumerate}
 \end{bemerkung}
@@ -213,9 +213,9 @@ $(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
   \end{enumerate}
 \end{definition}
 
-\begin{satz}{Kompaktheit in metr. R.}
+\begin{satz}{Kompaktheit in MR}
+  $K$ \textit{kompakt}
   \begin{enumerate}[label = $\Leftrightarrow$]
-    \item $K$ \textit{kompakt}
     \item $K$ \textit{folgenkompakt}
     \item $K$ \textit{totalbeschränkt} und \textit{vollständig}
   \end{enumerate}
@@ -247,6 +247,15 @@ $(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
       \textit{kompakt}
   \end{enumerate}
 \end{satz}
+
+\begin{satz}{Kompakter MR}
+  Sei \((X,d)\) kompt. MR und \(A\subset X\) abg. \(\implies A\) kompakt
+\end{satz}
+
+\begin{lemma}
+  Sei \((X,d)\) MR, \(B\subset X\) rel. komp, \(A\subset B \implies A\) rel.
+  komp.
+\end{lemma}
 
 \begin{satz}{Rieszsches Lemma}
   $(X, \|\cdot\|)$ normierter Raum, $Y \neq X$ abg. UR, $\delta>0$\\
