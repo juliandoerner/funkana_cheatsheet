@@ -28,11 +28,11 @@
   \begin{enumerate}[label = (\arabic*)]
     \item $x_0 \in M$ \textbf{innerer Pkt.} von M
       $\Leftrightarrow \exists r>0: B(x_0,r) \subset M$
-    \item $int(M) = \{x \in M|x\ \text{i. Pkt. v.}\ M\}$
+    \item $int(M)$ Menge aller \textit{inneren Pkt.}
     \item $x_0 \in X$ \textbf{Randpunkt} von M $\Leftrightarrow
       \forall r>0: B(x_0,r) \cap M \neq \emptyset \wedge B(x_0,r)
       \cap (X\setminus M) \neq \emptyset.$
-    \item \textbf{Rand} $\partial M = \{x\in X| x \text{ Randpunkt v. } M\}$
+    \item \textbf{Rand} $\partial M$ Menge aller \textit{Randpkt.}
     \item \textbf{Abschluss} $\overline{M} = \{x \in X|\forall r>0 B(x,r)\cap
       M \neq \emptyset$
   \end{enumerate}
@@ -75,26 +75,38 @@
   \end{enumerate}
 \end{definition}
 
-$D$ \textbf{dicht} in $M \Leftrightarrow \forall x
-\in M \exists (x_n)_n \subset D: x_n \to x$
-\heel
+\begin{korrolar}
+  $D$ \textbf{dicht} in $M \Leftrightarrow \forall x
+  \in M \exists (x_n)_n \subset D: x_n \to x$
+\end{korrolar}
 
 \begin{lemma}
   $(X, \norm{\cdot})$ ist \textbf{seperabel} $\Leftrightarrow
-  \exists A \subset X: A \text{ abz. } lin(A) \text{ dicht in X}$
+  \exists A \subset X$ abz. u. $lin(A)$ dicht in \(X\)
 \end{lemma}
 
 
 
 \subsection{Teilraumtopologie}
-$(X,d)$ metr. Raum, ${M \subset X, d_M:M\times M \to \RR}$
-\textit{Teilraummetrik}.
+\((X,d)\) MR, \(M\subset X, d_M = d_{|M\times M}\)\\
 
 \begin{definition}{relativ offen}
   $A \subset M$ heißt \textbf{relativ offen}, falls $A$ offen in $(M,d_M)$
 \end{definition}
 
+\begin{lemma}
+  \(A\subset M\) ist offen in \(M\), gdw. es \(A'\subset X\) offen gibt, mit
+  \(A = A'\cap X\)
+\end{lemma}
 
+\begin{korrolar}
+  Sei \(A \subset M\). Für den Abschluss \(\overline{A}^M\) in \(M\) gilt
+  \(\overline{A}^M = \overline{A}\cap M\)
+\end{korrolar}
+
+\begin{satz}{Seperabler Teilraum}
+  Sei \(X\) seperabel \(\implies M\) seperabel.
+\end{satz}
 
 \subsection{Stetigkeit}
 
