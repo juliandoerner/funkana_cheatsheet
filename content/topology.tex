@@ -30,10 +30,10 @@
       $\Leftrightarrow \exists r>0: B(x_0,r) \subset M$
     \item $int(M)$ Menge aller \textit{inneren Pkt.}
     \item $x_0 \in X$ \textbf{Randpunkt} von M $\Leftrightarrow
-      \forall r>0: B(x_0,r) \cap M \neq \emptyset \wedge B(x_0,r)
+      \forall r>0: B(x_0,r) \cap M \neq \emptyset$ und $B(x_0,r)
       \cap (X\setminus M) \neq \emptyset.$
     \item \textbf{Rand} $\partial M$ Menge aller \textit{Randpkt.}
-    \item \textbf{Abschluss} $\overline{M} = \{x \in X|\forall r>0 B(x,r)\cap
+    \item \textbf{Abschluss} $\overline{M} = \{x \in X|\forall r>0: B(x,r)\cap
       M \neq \emptyset$
   \end{enumerate}
 \end{definition}
@@ -70,8 +70,8 @@
   $(X,d)$ metr., $D,M \subset X$
   \begin{enumerate}[label = (\arabic*)]
     \item $D$ \textbf{dicht} in $M \Leftrightarrow M \subset \overline{D}$
-    \item $(X,d)$ \textbf{seperabel} $\Leftrightarrow \exists A \subset X:
-    A \text{ abz. und dicht in }X$
+    \item $(X,d)$ \textbf{seperabel} $\Leftrightarrow \exists A \subset X$ 
+      \textit{abz.} und \textit{dicht} in \(X\).
   \end{enumerate}
 \end{definition}
 
@@ -104,8 +104,8 @@
 \end{definition}
 
 \begin{lemma}
-  \(A\subset M\) ist offen in \(M\), gdw. es \(A'\subset X\) offen gibt, mit
-  \(A = A'\cap X\)
+  \(A\subset M\) ist \textit{offen in} \(M\), gdw. es \(A'\subset X\) 
+  offen gibt, mit \(A = A'\cap X\)
 \end{lemma}
 
 \begin{korrolar}
@@ -114,7 +114,7 @@
 \end{korrolar}
 
 \begin{satz}{Seperabler Teilraum}
-  Sei \(X\) seperabel \(\implies M\) seperabel.
+  Sei \(X\) seperabel \(\implies M\) \textit{seperabel}.
 \end{satz}
 
 \subsection{Stetigkeit}
@@ -154,7 +154,7 @@ $X,Y$ metr. R., $f:X\to Y$\\
 \begin{definition}{Lipschitz-Stetig}
   $f$ heißt \textbf{Lipschitz-Stetig}, falls
   $\exists L >0 \forall \delta >0 \forall x,y \in X:
-  d(f(x),f(y)) \leq L d(x,y)$
+  d(f(x),f(y)) \leq L \cdot d(x,y)$
 \end{definition}
 
 \begin{satz}{glm. Fortsetzung}
@@ -259,8 +259,8 @@ $(\|\cdot\|, X), (|||\cdot|||, X)$ normierte Räume\\
 
 \begin{satz}{Rieszsches Lemma}
   $(X, \|\cdot\|)$ normierter Raum, $Y \neq X$ abg. UR, $\delta>0$\\
-  Dann $\exists x_{\delta} \in X, \|x_{\delta}\| = 1,  \|x_{\delta}-y\|
-  \geq 1-\delta \forall y \in Y$
+  Dann $\exists x_{\delta} \in X, \|x_{\delta}\| = 1: \|x_{\delta}-y\|
+  \geq 1-\delta,\ \forall y \in Y$
 \end{satz}
 
 \begin{lemma}
