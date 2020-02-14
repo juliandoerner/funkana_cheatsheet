@@ -15,25 +15,27 @@
 \end{lemma}
 
 \begin{satz}{Satz von Baire}
-  $(X,d)$ voll., $(O_n) \subset X$ \textit{offen} und \textit{dicht}
-  $\implies \cap_{n=1}^\infty O_n \neq \emptyset$
+  $(X,d)$ voll., $(O_n)_n \in X^\NN$ \textit{offen} und \textit{dicht} in
+  \(X\)
+  $\implies \cap_{n=1}^\infty O_n$ \textit{offen} und \textit{dicht} in \(X\)
 \end{satz}
 
 \begin{definition}{Kategorien}
   \begin{enumerate}[label = (\roman*)]
     \item $M \subset X$ \textbf{nirgends dicht},
-      falls $\inter \overline{A} = \emptyset$
-    \item $M \subset X$ \textbf{1. Kategorie}, falls $\exists (M_n) \subset X$
+      falls $\inter \overline{M} = \emptyset$
+    \item $M \subset X$ \textbf{1. Kategorie}, falls $\exists (M_n)_n \in X^\NN$
       \textit{nirgends dicht}, $M = \cup_{n=1}^\infty M_n$
     \item $M \subset X$ \textbf{2. Kategorie}, falls nicht von
       \textit{1. Kategorie}
   \end{enumerate}
 \end{definition}
 
-\begin{korrolar}
-  $(X,d)$ voll., $M \subset X$ \textit{1. Kategorie} $\implies M^C = X\\M$
+\begin{satz}{Bairescher Kategoriensatz}
+  $(X,d)$ voll., $M \subset X$ \textit{1. Kategorie} $\implies M^C = 
+  X\setminus M$
   \textit{dicht} in $X$
-\end{korrolar}
+\end{satz}
 
 \begin{korrolar}
   Ein voll. metr. R. ist von \textit{2. Kategorie}:\\
@@ -107,17 +109,32 @@ $X,Y$ metr. R.
 \end{satz}
 
 \begin{korrolar}
+  \begin{enumerate}[label = (\roman*)]
+    \item \(T\) \textit{bij.} \(\implies T\) Isomoph. u. \(T^{-1}\) 
+      \textit{stetig}
+    \item \(T\) \textit{inj.} dann ist \(T:R(T) \to X \in L(R(T),X)\) gdw.
+      \(R(T)\) \textit{abg.}
+  \end{enumerate}
+\end{korrolar}
+
+\begin{korrolar}
   $(X,\|\cdot\|),(X,|||\cdot|||)$ \textit{voll.}
   $\exists M > 0 \forall x\in X: \|x\| \leq M |||x|||
   \implies \|\cdot\|,|||\cdot|||$ \textbf{äq.}
 \end{korrolar}
 
-\subsection{Satz vom abgeschlossenen Graphen}
+\begin{korrolar}
+  \(X,Y\) BR, \(T\in L(X,Y)\).\\
+  \(T\) ist \textit{inj.} u. \(R(T)\) \textit{abg.} gdw. 
+  \(\exists c > 0: \|Tx\| \geq c\|x\| \forall x\in X\)
+\end{korrolar}
+
+\subsection{Satz vom abg. Graphen}
 $X,Y$ norm. R.
 
 \begin{definition}{Abgeschlossenen lin. Abbildung}
   $D\subset X$ UR, $T:D \to Y$ lin.\\
-  $T$ heißt \textbf{agb.}, falls für $(x_n) \subset D, x_n \to x \in X$ u.
+  $T$ heißt \textbf{agb.}, falls für $(x_n)_n \in D^\NN, x_n \to x \in X$ u.
   $Tx_n \to y \in Y \implies x \in D,\ Tx = y $
 \end{definition}
 
