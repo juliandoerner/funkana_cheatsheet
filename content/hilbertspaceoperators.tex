@@ -1,0 +1,59 @@
+
+\section{Operatoren auf Hilberträumen}
+
+\begin{bemerkung}
+    \(H\) HR.
+    Fréchet-Riesz:\\
+    \(\Phi_H:H\to H', y\mapsto (\cdot,y)\) ist kanon., konj. lin., isome.
+    Isomorphismus
+\end{bemerkung}
+
+\begin{definition}{adj. Operator}
+    \(H_1, H_2\) HR, \(T \in L(H_1,H_2)\). Der adj. Op \(T^*:H_2\to H_1\) ist
+    def durch \((Tx,y) = (x,T^*y)\ \forall x\in H_1, y\in H_2\)
+\end{definition}
+
+\begin{bemerkung}
+    Es gilt:\\
+    \(T^* = \Phi_{H_1}^{-1}T'\Phi_{H_2}\)
+\end{bemerkung}
+
+\begin{definition}{unitär, normal, selbstadj.}
+    \(T\in L(H_1,H_2)\)
+    \begin{enumerate}[label=(\roman*)]
+        \item \(T\) heißt \textit{unitär}, falls \(T\) inv. mit 
+            \(TT^*=Id_{H_2}\) und \(T^*T = Id_{H_1}\)
+        \item \(H_1 = H_2:\ T\) ist \textit{normal}, falls \(TT^* = T^*T\)
+        \item \(H_1 = H_2:\ T\) ist \textit{selbstadj.}, falls \(T=T^*\)
+    \end{enumerate}
+\end{definition}
+
+\begin{bemerkung}
+    \begin{enumerate}
+        \item \(T\) \textit{unitär} \(\Leftrightarrow T\) surj. u.
+            \((Tx,Ty) = (x,y)\ \forall x,y\in H_1\)
+        \item \(T\) \textit{normal} \(\Leftrightarrow (Tx,Ty) = (T^*x,T^*y) 
+            \ \forall x,y\in H_1\)
+        \item \(T\) \textit{selbstadj.} \(\Leftrightarrow (Tx,y) = (x,Ty) 
+            \ \forall x,y\in H_1\)
+    \end{enumerate}
+\end{bemerkung}
+
+\begin{satz}{Hellinger-Toeplitz}
+    \(H\) HR., \(T:H\to H\) lin.\\
+    Falls \((Tx,y) = (y,Tx)\ \forall x,y\in H\), dann ist \(T\) stetig 
+    und selbstadj.
+\end{satz}
+
+\begin{satz}{selbstadj. in komplexem HR}
+    \(H\) HR über \(\KK = \CC\) und \(T\in L(H)\). Dann ist äq.
+    \begin{enumerate}[label = (\roman*)]
+        \item \(T\) ist selbstadj.
+        \item \((Tx,x) \in \RR\ \forall x\in H\)
+    \end{enumerate}
+\end{satz}
+
+\begin{satz}{OPnorm selbstadj OP}
+    \(H\) HR, \(T\in L(H)\) selbstadj. Dann ist
+    \(\|T\| = \sup_{\|x\|\leq 1} |(Tx,x)|\)
+\end{satz}
