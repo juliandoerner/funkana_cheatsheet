@@ -51,7 +51,7 @@
     Für \(x\in X\) ist \(\delta_x: X' \to \KK, x'\mapsto <x,x'>\) lin. u. stetig
 \end{bemerkung}
 
-\begin{satz}
+\begin{satz}{kanon. Einbettung}
     Die kanon. Einbettung \(J_X : X\to X'', x\mapsto \delta_x\) ist lin. u.
     isom. aber im alg. nicht surj.
 \end{satz}
@@ -73,4 +73,108 @@
 \begin{satz}{Satz von Schauder}
     \(X,Y\) BR., \(T\in L(X,Y)\). Dann gilt
     \(T\) komp. \(\Leftrightarrow T'\) komp.
+\end{satz}
+
+
+\subsection{Reflexivität}
+
+\begin{definition}{Reflexivität}
+    Ein BR \(X\) heißt reflexiv, falls die kanon. Einbettung \(J_X\) surj. ist.
+\end{definition}
+
+\begin{bemerkung}
+    \begin{enumerate}[label = (\roman*)]
+        \item Dann ist \(X\cong X''\)
+        \item \(X\) nicht voll. \(\implies X\) nicht reflexiv
+        \item \(p\in (1,\infty): l^p, L^p\) reflexiv
+        \item \(c_0, l^1, l^\infty\) nicht reflexiv
+        \item \(X\) end. dim. \(\implies X\) reflexiv
+    \end{enumerate}
+\end{bemerkung}
+
+\begin{lemma}
+    \begin{enumerate}[label = (\roman*)]
+        \item Abg. UR von ref. R. sind ref.
+        \item \(X\) ref \(\Leftrightarrow X'\) ref.
+    \end{enumerate}
+\end{lemma}
+
+\begin{korrolar}
+    \(X\) ref. ist seperabel \(\Leftrightarrow X'\) seperabel
+\end{korrolar}
+
+\begin{bemerkung}
+    Hilberträume sind seperabel
+\end{bemerkung}
+
+\begin{definition}{schwache Konvergenz}
+    \(X\) BR. \((x_n)_n) \in X\) heißt schw. konv. gegen \(x\in X\), falls
+    \(<x_n,x'> \to <x,x'> \forall x'\in X'\)\\
+    Not: \(x_n \rightharpoonup x, x_n \stackrel{\sigma}{\to} x,
+    x_n \stackrel{\omega}{\to} x\)
+\end{definition}
+
+\begin{definition}{schwach* Konvergenz}
+    \(X\) BR. \((x'_n)_n \in X'\) heißt schw.* konv. gegen \(x'\in X'\), falls
+    \(<x,x'_n> \to <x,x'> \forall x\in X\)\\
+    Not: \(x'_n \stackrel{*}{\rightharpoonup} x',
+    x'_n \stackrel{\sigma^*}{\to} x', x'_n \stackrel{\omega^*}{\to}x'\)
+\end{definition}
+
+\begin{bemerkung}
+    \begin{enumerate}
+        \item Konv. in Norm \(\implies\) schw. Konv.
+        \item schw./* GWe sind eindeutig
+        \item schw. Konv. in \(X \implies\) schw.* Konv. in \(X''\)\\
+            \(<x,x'>_{X\times X'} = \\ <x',J_X(x)>_{X' \times X''}\)
+        \item Ist \(X\) ref., dann sind schw, Konv auf \(X'\) und schw.* Konv.
+            auf \(X\) das Gleiche.
+        \item \(X'\) ist schw.*-folgenvollständig. D.h. ist \(\forall x \in X:
+            ( <x,x'_n>)_n\) CF in \(\KK\), dann ex. \(x' \in X'\) mit 
+            \(x'_n \stackrel{*}{\rightharpoonup}x'\)
+    \end{enumerate}
+\end{bemerkung}
+
+\begin{satz}{schw. Konv. auf dichter Menge}
+    \(X\) BR, \(x_n,x\in X, x'_n,x'\in X'\)\\
+    \(D\subset X: \overline{linD} = X\)\\
+    \(D'\subset X': \overline{linD'} = X'\)\\
+    Dann gilt
+    \begin{enumerate}[label = (\alph*)]
+        \item \(x_n \rightharpoonup x \Leftrightarrow \sup_n \|x_n\| < \infty\)
+            und \(<x_n,x'> \to <x,x'> \forall x'\in D'\)
+        \item \(x'_n \stackrel{*}{\rightharpoonup} x' \Leftrightarrow
+            \sup_n \|x'_n\| < \infty\) und \(<x,x'_n> \to <x, x'>
+            \forall x\in D\)
+    \end{enumerate}
+    In a) gilt \(\|x\| \leq \liminf \|x_n\|\)\\
+    In b) gilt \(\|x'\| \leq \liminf \|x'_n\|\)
+\end{satz}
+
+\begin{satz}{Banach-Alaoglu Ver. I}
+    Sei \(X\) seperabler BR.\\ Für \((x'_n)_n\) beschr. ex. \(x'\in X'\) und
+    \((x'_{n_j})_j\) mit \(x_{n_j} \stackrel{*}{\rightharpoonup} x'\) und
+    \(\|x'\| \leq \liminf \|x'_n\|\)
+\end{satz}
+
+\begin{bemerkung}
+    \begin{enumerate}
+        \item im alg. falsch für \(X\) nicht-seperabel
+        \item Satz gilt nicht für schw. Konv.
+    \end{enumerate}
+\end{bemerkung}
+
+\begin{satz}{Banach-Alaoglu Ver. II}
+    Sei \(X\) reflexiver BR.\\ Für \((x_n)_n\) beschr. ex. \(x\in X\) und
+    \((x_{n_j})_j\) mit \(x_{n_j} \rightharpoonup x\) und
+    \(\|x\| \leq \liminf \|x_n\|\)
+\end{satz}
+
+\begin{satz}{Mazur}
+    \(X\) BR, \(V\subset X\) abg.und konvex. Ist \((x_n)\) schw. konv. in V mit
+    \(x_n \rightharpoonup x \implies x \in V\)
+\end{satz}{Mazur}
+
+\begin{satz}{Banach-Alaoglu + Mazur}
+    \(X\) ref. \(\implies \overline{B_X}\) schw.-folgenkompakt
 \end{satz}
