@@ -6,6 +6,16 @@
   $M \subset X$ \textbf{abgeschlossen} $\Leftrightarrow X\setminus M$ offen.
 \end{definition}
 
+\begin{satz}{Offenheit mit Folgen}
+  Sei \(U\subset X\). Es sind äq.
+  \begin{enumerate}[label=(\roman*)]
+    \item \(U\) \textit{offen}
+    \item \(\forall x\in U\) und jede gegen \(x\) konv.
+      Folge \((x_n)_\ninNN\), ex \(N\in\NN\) mit \(x_n \in U,
+      \forall n\geq N\)
+  \end{enumerate}
+\end{satz}
+
 \begin{lemma}
   \begin{enumerate}[label = (\arabic*)]
     \item Die Vereinigung \textit{beliebig} vieler offener Mengen ist offen.
@@ -18,12 +28,12 @@
   \begin{enumerate}[label = (\arabic*)]
     \item $x_0 \in M$ \textbf{innerer Pkt.} von M
       $\Leftrightarrow \exists r>0: B(x_0,r) \subset M$
-    \item $int(M) = \{x \in M|x\ \text{i. Pkt. v.}\ M\}$
+    \item $int(M)$ Menge aller \textit{inneren Pkt.}
     \item $x_0 \in X$ \textbf{Randpunkt} von M $\Leftrightarrow
-      \forall r>0: B(x_0,r) \cap M \neq \emptyset \wedge B(x_0,r)
+      \forall r>0: B(x_0,r) \cap M \neq \emptyset$ und $B(x_0,r)
       \cap (X\setminus M) \neq \emptyset.$
-    \item \textbf{Rand} $\partial M = \{x\in X| x \text{ Randpunkt v. } M\}$
-    \item \textbf{Abschluss} $\overline{M} = \{x \in X|\forall r>0 B(x,r)\cap
+    \item \textbf{Rand} $\partial M$ Menge aller \textit{Randpkt.}
+    \item \textbf{Abschluss} $\overline{M} = \{x \in X|\forall r>0: B(x,r)\cap
       M \neq \emptyset$
   \end{enumerate}
 \end{definition}
@@ -60,31 +70,52 @@
   $(X,d)$ metr., $D,M \subset X$
   \begin{enumerate}[label = (\arabic*)]
     \item $D$ \textbf{dicht} in $M \Leftrightarrow M \subset \overline{D}$
-    \item $(X,d)$ \textbf{seperabel} $\Leftrightarrow \exists A \subset X:
-    A \text{ abz. und dicht in }X$
+    \item $(X,d)$ \textbf{seperabel} $\Leftrightarrow \exists A \subset X$ 
+      \textit{abz.} und \textit{dicht} in \(X\).
   \end{enumerate}
 \end{definition}
 
-$D$ \textbf{dicht} in $M \Leftrightarrow \forall x
-\in M \exists (x_n)_n \subset D: x_n \to x$
-\heel
+\begin{korrolar}
+  $D$ \textbf{dicht} in $M \Leftrightarrow \forall x
+  \in M \exists (x_n)_n \subset D: x_n \to x$
+\end{korrolar}
 
 \begin{lemma}
   $(X, \norm{\cdot})$ ist \textbf{seperabel} $\Leftrightarrow
-  \exists A \subset X: A \text{ abz. } lin(A) \text{ dicht in X}$
+  \exists A \subset X$ abz. u. $lin(A)$ dicht in \(X\)
 \end{lemma}
+
+\begin{satz}{Separabilität von BR}
+  Sei \((X, \|\cdot\|)\) ein BR. Dann sind äq.
+  \begin{enumerate}[label=(\roman*)]
+    \item \(X\) separabel
+    \item \(B_X=\{x\in X: \|x\| < 1\}\) seperabel
+    \item \(S_X=\{x\in X: \|x\| = 1\}\) seperabel
+  \end{enumerate}
+\end{satz}
 
 
 
 \subsection{Teilraumtopologie}
-$(X,d)$ metr. Raum, ${M \subset X, d_M:M\times M \to \RR}$
-\textit{Teilraummetrik}.
+\((X,d)\) MR, \(M\subset X, d_M = d_{|M\times M}\)\\
 
 \begin{definition}{relativ offen}
   $A \subset M$ heißt \textbf{relativ offen}, falls $A$ offen in $(M,d_M)$
 \end{definition}
 
+\begin{lemma}
+  \(A\subset M\) ist \textit{offen in} \(M\), gdw. es \(A'\subset X\) 
+  offen gibt, mit \(A = A'\cap X\)
+\end{lemma}
 
+\begin{korrolar}
+  Sei \(A \subset M\). Für den Abschluss \(\overline{A}^M\) in \(M\) gilt
+  \(\overline{A}^M = \overline{A}\cap M\)
+\end{korrolar}
+
+\begin{satz}{Seperabler Teilraum}
+  Sei \(X\) seperabel \(\implies M\) \textit{seperabel}.
+\end{satz}
 
 \subsection{Stetigkeit}
 
@@ -92,10 +123,10 @@ $X,Y$ metr. R., $f:X\to Y$\\
 \begin{definition}{Stetigkeit}
   \begin{enumerate}[label = (\arabic*)]
     \item  f heißt \textbf{stetig}, falls\\
-      $\forall O \subset Y \text{ offen } \implies f^{-1}(O) \text{ offen }$
+      $\forall O \subset Y$ offen $\implies f^{-1}(O)$ offen.
     \item f heißt \textbf{stetig in} $x_0 \in X$, falls\\
-      $\forall V \subset Y \text{ Umgebung v. } f(x_0) \exists
-      U \subset X \text{ Umgebung v. } x_0: f(U) \subset V$
+      $\forall V \subset Y$ Umgebung v. $f(x_0)$ ex.
+      $U \subset X$ Umgebung v. $x_0$ mit $f(U) \subset V$
   \end{enumerate}
 \end{definition}
 
@@ -123,7 +154,7 @@ $X,Y$ metr. R., $f:X\to Y$\\
 \begin{definition}{Lipschitz-Stetig}
   $f$ heißt \textbf{Lipschitz-Stetig}, falls
   $\exists L >0 \forall \delta >0 \forall x,y \in X:
-  d(f(x),f(y)) \leq L d(x,y)$
+  d(f(x),f(y)) \leq L \cdot d(x,y)$
 \end{definition}
 
 \begin{satz}{glm. Fortsetzung}
@@ -136,18 +167,18 @@ $X,Y$ metr. R., $f:X\to Y$\\
 
 \subsection{Äquivalente Normen}
 
-$(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
+$(\|\cdot\|, X), (|||\cdot|||, X)$ normierte Räume\\
 
 \begin{definition}{Äquivalente Normen}
-  $\|\cdot\|, \||\cdot\||$ sind äquivalent, falls
-  $\exists c,C>0 \forall x\in X: c\|x\| \leq \||x\|| \leq C \|x\|$
+  $\|\cdot\|, |||\cdot|||$ sind äquivalent, falls
+  $\exists c,C>0 \forall x\in X: c\|x\| \leq |||x||| \leq C \|x\|$
 \end{definition}
 
 \begin{satz}{äq. Normen und GWe}
   \begin{enumerate}[label = $\Leftrightarrow$]
-    \item $\|\cdot\|, \||\cdot\||$ äquivalent
-    \item $\|\cdot\|, \||\cdot\||$ haben die \textit{gleichen konv. Folgen}
-    \item $\|\cdot\|, \||\cdot\||$ haben die \textit{gleichen Nullfolgen}
+    \item $\|\cdot\|, |||\cdot|||$ äquivalent
+    \item $\|\cdot\|, |||\cdot|||$ haben die \textit{gleichen konv. Folgen}
+    \item $\|\cdot\|, |||\cdot|||$ haben die \textit{gleichen Nullfolgen}
   \end{enumerate}
 \end{satz}
 
@@ -156,10 +187,10 @@ $(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
   \begin{enumerate}[label = (\roman*)]
     \item $(X,d_1),(X,d_2)$ metr. Räume mit den selben konv. Folgen
       $\not\Rightarrow$ dieselben CF
-    \item Sind $\|\cdot\|, \||\cdot\||$ äquivalent, dann haben die Räume die
+    \item Sind $\|\cdot\|, |||\cdot|||$ äquivalent, dann haben die Räume die
       \textit{gleichen} offenen (abgl.) Mengen
-    \item Sind $\|\cdot\|, \||\cdot\||$ äquivalent, dann gilt
-      $(X,\|\cdot\|)$ voll. $\Leftrightarrow$ $(X,\||\cdot\||)$ voll.
+    \item Sind $\|\cdot\|, |||\cdot|||$ äquivalent, dann gilt
+      $(X,\|\cdot\|)$ voll. $\Leftrightarrow$ $(X,|||\cdot|||)$ voll.
     \item In end. dim. Räumen sind alle Normen äq.
   \end{enumerate}
 \end{bemerkung}
@@ -182,9 +213,9 @@ $(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
   \end{enumerate}
 \end{definition}
 
-\begin{satz}{Kompaktheit in metr. R.}
+\begin{satz}{Kompaktheit in MR}
+  $K$ \textit{kompakt}
   \begin{enumerate}[label = $\Leftrightarrow$]
-    \item $K$ \textit{kompakt}
     \item $K$ \textit{folgenkompakt}
     \item $K$ \textit{totalbeschränkt} und \textit{vollständig}
   \end{enumerate}
@@ -217,10 +248,19 @@ $(\|\cdot\|, X), (\||\cdot\||, X)$ normierte Räume\\
   \end{enumerate}
 \end{satz}
 
+\begin{satz}{Kompakter MR}
+  Sei \((X,d)\) kompt. MR und \(A\subset X\) abg. \(\implies A\) kompakt
+\end{satz}
+
+\begin{lemma}
+  Sei \((X,d)\) MR, \(B\subset X\) rel. komp, \(A\subset B \implies A\) rel.
+  komp.
+\end{lemma}
+
 \begin{satz}{Rieszsches Lemma}
   $(X, \|\cdot\|)$ normierter Raum, $Y \neq X$ abg. UR, $\delta>0$\\
-  Dann $\exists x_{\delta} \in X, \|x_{\delta}\| = 1,  \|x_{\delta}-y\|
-  \geq 1-\delta \forall y \in Y$
+  Dann $\exists x_{\delta} \in X, \|x_{\delta}\| = 1: \|x_{\delta}-y\|
+  \geq 1-\delta,\ \forall y \in Y$
 \end{satz}
 
 \begin{lemma}

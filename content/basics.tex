@@ -3,9 +3,9 @@
 \begin{definition}{Metrik}
   $d:X \times X \to [0,\infty)$, $x,y \in X$
   \begin{enumerate}[label=(M\arabic*)]
-    \item $d(x,y) = 0 \Leftrightarrow x = y$ \textit{Definitheit}
-    \item $d(x,y) = d(y,x)$ \textit{Symmetrie}
-    \item $d(x,z) \leq d(x,y) + d(y,z)$ \textit{Dreiecksungleichung}
+    \item $d(x,y) = 0 \Leftrightarrow x = y$
+    \item $d(x,y) = d(y,x)$
+    \item $d(x,z) \leq d(x,y) + d(y,z)$
   \end{enumerate}
 \end{definition}
 
@@ -18,16 +18,16 @@ Genügt $d$ nur (M2), (M3) und ist $d(x,x) = 0$, dann heißt $d$
 \end{definition}
 
 \begin{definition}{Vollständigkeit}
-  Ein metrischer Raum $(X,d)$ heißt \textit{vollständig}, wenn jede Cauchyfolge
+  Ein \textbf{MR} $(X,d)$ heißt \textit{vollständig}, wenn jede CF
   konvergiert.
 \end{definition}
 
 \begin{definition}{Norm}
   $\norm{\cdot}:X\to\RR$, $X\ \KVR$, $x,y \in X, \lambda \in \KK$
   \begin{enumerate}[label=(N\arabic*)]
-    \item $\norm{x} = 0 \implies x = 0$ \textit{Definitheit}
-    \item $\norm{\lambda x} = |\lambda|\norm{x}$ \textit{Homogenität}
-    \item $\norm{x+y} \leq \norm{x} + \norm{y}$ \textit{Dreiecksungleichung}
+    \item $\norm{x} = 0 \implies x = 0$
+    \item $\norm{\lambda x} = |\lambda|\norm{x}$
+    \item $\norm{x+y} \leq \norm{x} + \norm{y}$
   \end{enumerate}
 \end{definition}
 
@@ -41,5 +41,31 @@ Halbnorm auf X.
 \end{definition}
 
 \begin{definition}{Banachraum}
-  Ein vollständig normierter Raum ${(X,\norm{\cdot})}$ heißt Banachraum
+  Ein vollständiger NR ${(X,\norm{\cdot})}$ heißt Banachraum
 \end{definition}
+
+\begin{satz}{Voll. NR u. Reihen}
+  Sei \((X,\|\cdot\|)\) NR. Es sind äq.
+  \begin{enumerate}[label=(\roman*)]
+    \item \((X,\|\cdot\|)\) voll.
+    \item Für \(\sum_{n=1}^\infty \|x_n\| < \infty\) ex.
+      \(x\in X\) mit \(lim_{N\to\infty}\|x-
+      \sum_{n=1}^N x_n\| = 0\)
+  \end{enumerate}
+\end{satz}
+
+\begin{satz}{CF-TF Konvergenz}
+  Sei \((x_n)_n\) CF in \((X,d)\) MR. Gibt es eine TF
+  \((x_{n_j})_j\), die gegen \(x\in X\) konvergiert,
+  so konvergiert \((x_n)_n\) gegen \(x\).
+\end{satz}
+
+\begin{satz}{TF Konvergenz}
+  Sei \((x_n)_n\) eine Folge in \((X,d)\) MR. Dann sind
+  äq.
+  \begin{enumerate}[label=(\roman*)]
+    \item \((x_n)_n\) konvergiert gegen \(x\)
+    \item Jede TF \((x_{n_j})_j\) hat eine gegen \(x\)
+      konvergente TF
+  \end{enumerate}
+\end{satz}

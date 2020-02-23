@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#Generates new release
+
+latexmk -pdf -outdir=out cheatsheet.tex
+mv out/*.pdf cheatsheet_release.pdf
+
+pdftoppm cheatsheet_release.pdf preview -png -f 1 -singlefile

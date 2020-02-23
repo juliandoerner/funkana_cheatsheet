@@ -9,11 +9,11 @@ f\indicator_K \in L^1(\Omega),\ K\subset \Omega \text{ kpt.}\}\) \\
 
 \begin{definition}{schwache Ableitung}
     \(\Omega \subset \RR^n\) Gebiet,
-    \(f\in L^1_{lov}(\Omega), j\in \{1,..,n\}\)\\
+    \(f\in L^1_{loc}(\Omega), j\in \{1,..,n\}\)\\
     Existiert \(g \in L^1_{loc}(\Omega):\)
     \(
         \int_\Omega f\cdot \partial_j\varphi dx =
-         - \int_\Omega g\cdot \varphi dxm, \ \ 
+         - \int_\Omega g\cdot \varphi dx, \ \ 
          \forall \varphi\in C_c^{\infty}(\Omega),
     \)
     dann heißt \(f\) schwach nach \(x_j\) ableitbar, und \(\partial_jf=g\) ist
@@ -70,17 +70,17 @@ f\indicator_K \in L^1(\Omega),\ K\subset \Omega \text{ kpt.}\}\) \\
         \item \(p\in [1,\infty)\):\\
             \( \|f\|_{W^{1,p}} = (\|f\|_p^p +
             \sum_{j=1}^{n}\|\partial_jf\|_p^p)^{\frac{1}{p}} \)
-        \item \(p = \inf\):\\
+        \item \(p = \infty\):\\
             \( \|f\|_{W^{1,p}} =
             \max\{\|f\|_\infty, \|\partial_1f\|_\infty, \dots,
-            \|\partial_nf\|_\infty\} \)
+            \|\partial_nf\|_\infty \} \)
     \end{enumerate}
 \end{definition}
 
 \begin{satz}{Vollständige Sobolevräume}
     Für \(m \in \NN,\ p\in [1,\infty]\) ist
-    \((W^{m,p}(\Omega),\|\cdot\|_{W^{m,p}})\) ein Banachraum.\\
-    Weiter ist \(W^{m,2}(\Omega)=H^m(\Omega)\) ist Hilbertraum mit Skalarprodukt
+    \((W^{m,p}(\Omega),\|\cdot\|_{W^{m,p}})\) ein BR.\\
+    Weiter ist \(W^{m,2}(\Omega)=H^m(\Omega)\) HR mit SP
     \((f,g)_{H^m(\Omega)}=\sum_{|\alpha|\leq m}
     (\partial^\alpha f,\partial^\alpha g)_{L^2(\Omega)}\)
 \end{satz}
@@ -111,4 +111,11 @@ f\indicator_K \in L^1(\Omega),\ K\subset \Omega \text{ kpt.}\}\) \\
     \(W^{m,p}(\RR^n)\)
 \end{satz}
 
+\begin{lemma}
+    Zu \(f\in H^m(\Omega)\) mit \(m > k+\frac{n}{2}\) ex.
+    \(g\in C^k(\Omega)\) mit \(f=g\) f.ü.
+\end{lemma}
 
+\begin{satz}{von Rellich}
+    Die Einbettung \(H_0^1(\Omega) \hookrightarrow L^2(\Omega)\) ist kompakt.
+\end{satz}
