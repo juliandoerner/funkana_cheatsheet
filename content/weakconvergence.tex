@@ -19,7 +19,15 @@
     \forall x\in X,\forall y'\in Y'\)
 \end{bemerkung}
 
-\begin{satz}
+\begin{bemerkung}
+    \begin{enumerate}[label =(\roman*)]
+        \item Die Abb. \(L(X,Y) \to L(X',Y'), T \mapsto T'\) ist lin., isom.,
+            aber im alg. nicht surj.
+        \item \(T\in L(X,Y), S\in L(Y,Z): (ST)'=T'S'\)
+    \end{enumerate}
+\end{bemerkung}
+
+\begin{satz}{Zsmh. Kern und Bild Adj.}
     \(X,Y\) Br. \(T\in L(X,Y)\). Dann gilt
     \begin{enumerate}[label = (\roman*)]
         \item \(R(T)^\perp = N(T')\)
@@ -32,3 +40,37 @@
     Die Gleichung \(Tx=y\) ist lösbar gdw. \(T'y' = 0\)
 \end{korrolar}
 
+
+\subsection{Bidualraum}
+
+\begin{definition}{Bidualraum}
+    \(X\) NR., \(X'' := (X')'\) heißt \textbf{Bidualraum}
+\end{definition}
+
+\begin{bemerkung}
+    Für \(x\in X\) ist \(\delta_x: X' \to \KK, x'\mapsto <x,x'>\) lin. u. stetig
+\end{bemerkung}
+
+\begin{satz}
+    Die kanon. Einbettung \(J_X : X\to X'', x\mapsto \delta_x\) ist lin. u.
+    isom. aber im alg. nicht surj.
+\end{satz}
+
+\begin{bemerkung}
+    \begin{enumerate}[label=(\roman*)]
+        \item Durch \(J_X\) wird \(X\) mit UR von \(X''\) identif.
+        \item \(X\) voll. \(\implies J_X(X)\) voll.
+        \item \(X\) norm. R., so ist \((\overline{J_X(X)}, J_X)\) Vervollstän.
+        \item Jeder norm. R. ist isom. isomorph zu dichten UR eines BR.
+    \end{enumerate}
+\end{bemerkung}
+
+\begin{lemma}
+    \(X,Y\) BR, \(T\in L(X,Y)\). Dann ist \(T'' := (T')':X''\to Y''\) lin. u.
+    stetig mit \(\|T''\| = \|T\|\) und \(T'' \circ J_X = J_Y \circ T \)
+\end{lemma}
+
+\begin{satz}{Satz von Schauder}
+    \(X,Y\) BR., \(T\in L(X,Y)\). Dann gilt
+    \(T\) komp. \(\Leftrightarrow T'\) komp.
+\end{satz}
