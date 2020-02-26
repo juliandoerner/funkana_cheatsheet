@@ -21,7 +21,7 @@
 
 \begin{bemerkung}
     \begin{enumerate}[label =(\roman*)]
-        \item Die Abb. \(L(X,Y) \to L(X',Y'), T \mapsto T'\) ist lin., isom.,
+        \item Die Abb. \(L(X,Y) \to L(Y',X'), T \mapsto T'\) ist lin., isom.,
             aber im alg. nicht surj.
         \item \(T\in L(X,Y), S\in L(Y,Z): (ST)'=T'S'\)
     \end{enumerate}
@@ -37,8 +37,19 @@
 
 \begin{korrolar}
     \(X,Y\) Br. \(T\in L(X,Y)\) mit abg. Bild.\\
-    Die Gleichung \(Tx=y\) ist lösbar gdw. \(T'y' = 0\)
+    Die Gleichung \(Tx=y\) ist lösbar gdw. \((T'y' = 0 \implies y'(y) = 0)\)
 \end{korrolar}
+
+\begin{bemerkung}
+    \(X,Y\) BR., \(T\in L(X,Y)\).\\
+    Dann gilt
+    \begin{enumerate}[label= (\roman*)]
+        \item \(R(T)\) dicht in \(Y \Leftrightarrow T'\) \textit{inje.}
+        \item \(T\) \textit{inje.} u. \(R(T)\) \textit{abg.} \(\implies 
+            T'\) \textit{surj.}
+        \item \(T\) \textit{inv.} \(\Leftrightarrow T'\) \textit{inv.}
+    \end{enumerate}
+\end{bemerkung}
 
 
 \subsection{Bidualraum}
@@ -132,6 +143,7 @@
         \item \(X'\) ist schw.*-folgenvollständig. D.h. ist \(\forall x \in X:
             ( <x,x'_n>)_n\) CF in \(\KK\), dann ex. \(x' \in X'\) mit 
             \(x'_n \stackrel{*}{\rightharpoonup}x'\)
+        \item Schw. konv. Folgen sind \textit{besch.}
     \end{enumerate}
 \end{bemerkung}
 
@@ -178,3 +190,18 @@
 \begin{satz}{Banach-Alaoglu + Mazur}
     \(X\) ref. \(\implies \overline{B_X}\) schw.-folgenkompakt
 \end{satz}
+
+\begin{bemerkung}
+    Sei \(H\) ein HR. Dann sind äq.
+    \begin{enumerate}[label = (\roman*)]
+        \item \(x_n \rightharpoonup x\) u. \(\|x_n\| \to \|x\|\)
+        \item \(x_n \to x\)
+    \end{enumerate}
+    
+\end{bemerkung}
+
+\begin{bemerkung}
+    Sei \(H\) ein HR.\\
+    \(x_n \rightharpoonup x\) u. \(y_n \to y\).\\
+    Dann \((x_n,y_n) \to (x,y)\)
+\end{bemerkung}
